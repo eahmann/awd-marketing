@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_blocks_cta_banners",
+  "info": {
+    "name": "CTA banner",
+    "icon": "atlas",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "brand",
+        "primary",
+        "secondary",
+        "muted",
+        "white"
+      ]
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "centered_gradient",
+        "simple_justified"
+      ],
+      "default": "simple_justified",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.label-title-text-links"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "name": "seo",
+    "icon": "code-branch"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "shareImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cardType": {
+      "type": "enumeration",
+      "enum": [
+        "summary",
+        "summary_large_image",
+        "app",
+        "player"
+      ],
+      "default": "summary_large_image",
+      "required": true
+    },
+    "twitterUsername": {
+      "type": "string"
+    },
+    "preventIndexing": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

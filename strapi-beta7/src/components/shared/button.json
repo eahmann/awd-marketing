@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_buttons",
+  "info": {
+    "name": "button",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "brand",
+        "muted",
+        "white"
+      ],
+      "default": "brand",
+      "required": true
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    }
+  }
+}

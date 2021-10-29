@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_navbars",
+  "info": {
+    "name": "navbar",
+    "icon": "arrows-alt-h"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav-item"
+    }
+  }
+}
