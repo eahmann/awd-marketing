@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_title_and_texts",
+  "info": {
+    "name": "Title and text",
+    "icon": "minus",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.basic-block-settings",
+      "required": true
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.heading",
+      "required": true
+    }
+  }
+}

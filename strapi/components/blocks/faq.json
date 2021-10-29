@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_faqs",
+  "info": {
+    "name": "FAQ",
+    "icon": "pen-fancy",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.questions"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.basic-block-settings",
+      "required": true
+    }
+  }
+}

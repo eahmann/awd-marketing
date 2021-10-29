@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_settings_basic_block_settings",
+    "info": {
+      "name": "Basic block settings",
+      "icon": "angle-right"
+    },
+    "options": {},
+    "attributes": {
+      "marginTop": {
+        "type": "boolean",
+        "default": true,
+        "required": true
+      },
+      "marginBottom": {
+        "type": "boolean",
+        "default": true,
+        "required": true
+      }
+    }
+  }
+  

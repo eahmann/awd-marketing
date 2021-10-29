@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_settings_button_settings",
+  "info": {
+    "name": "Button settings",
+    "icon": "biohazard"
+  },
+  "options": {},
+  "attributes": {
+    "isExternal": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "newTab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "brand",
+        "primary",
+        "secondary",
+        "muted"
+      ],
+      "default": "brand",
+      "required": true
+    },
+    "outline": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "shadow": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

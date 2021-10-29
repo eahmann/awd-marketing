@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_settings_feature_group_settings",
+  "info": {
+    "name": "Feature group settings",
+    "icon": "balance-scale"
+  },
+  "options": {},
+  "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "brand",
+        "primary",
+        "secondary",
+        "muted",
+        "white"
+      ]
+    },
+    "marginTop": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "marginBottom": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "rows",
+        "columns"
+      ]
+    }
+  }
+}

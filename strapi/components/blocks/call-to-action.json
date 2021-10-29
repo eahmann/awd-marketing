@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_call_to_actions",
+  "info": {
+    "name": "Call To Action",
+    "icon": "exclamation-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.button"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.cta-block-settings",
+      "required": true
+    }
+  }
+}

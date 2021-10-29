@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_headings",
+  "info": {
+    "name": "heading",
+    "icon": "heading",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "alignment": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ],
+      "default": "center",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": false
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

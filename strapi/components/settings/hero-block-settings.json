@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_settings_hero_block_settings",
+  "info": {
+    "name": "Hero Block Settings",
+    "icon": "barcode"
+  },
+  "options": {},
+  "attributes": {
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "centered_image_with_overlay",
+        "image_offset_left",
+        "image_offset_right"
+      ]
+    },
+    "marginTop": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "marginBottom": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

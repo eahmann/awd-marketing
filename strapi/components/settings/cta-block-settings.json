@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_settings_cta_block_settings",
+  "info": {
+    "name": "CTA block settings",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "brand",
+        "primary",
+        "secondary",
+        "muted",
+        "white"
+      ]
+    },
+    "marginTop": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "marginBottom": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "wide_gradient",
+        "simple_justified"
+      ]
+    }
+  }
+}

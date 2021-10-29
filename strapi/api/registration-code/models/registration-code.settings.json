@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration_codes",
+  "info": {
+    "name": "Registration code",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "uid"
+    },
+    "role": {
+      "columnName": "role",
+      "plugin": "users-permissions",
+      "model": "role"
+    }
+  }
+}

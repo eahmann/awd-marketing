@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/registration-codes",
+      "handler": "registration-code.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/registration-codes/count",
+      "handler": "registration-code.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/registration-codes/:id",
+      "handler": "registration-code.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/registration-codes",
+      "handler": "registration-code.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/registration-codes/:id",
+      "handler": "registration-code.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/registration-codes/:id",
+      "handler": "registration-code.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

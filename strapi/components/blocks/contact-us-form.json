@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_contact_us_forms",
+  "info": {
+    "name": "ContactUsForm",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

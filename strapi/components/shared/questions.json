@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_questions",
+  "info": {
+    "name": "questions",
+    "icon": "cloud",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

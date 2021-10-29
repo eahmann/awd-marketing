@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_global_socials",
+  "info": {
+    "name": "Social",
+    "icon": "socks"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    }
+  }
+}

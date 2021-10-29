@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_blocks_heroes",
+  "info": {
+    "name": "Hero",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.button",
+      "max": 2
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.hero-block-settings",
+      "required": true
+    }
+  }
+}

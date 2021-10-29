@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_feature_groups",
+  "info": {
+    "name": "Feature group",
+    "icon": "arrows-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.heading",
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.feature-group-settings",
+      "required": true
+    }
+  }
+}

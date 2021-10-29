@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_service_card_groups",
+  "info": {
+    "name": "Service card group",
+    "icon": "layer-group",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.service-card"
+    },
+    "settings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.basic-block-settings",
+      "required": true
+    }
+  }
+}
