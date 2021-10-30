@@ -6,11 +6,11 @@
   },
   "options": {},
   "attributes": {
-    "href": {
+    "label": {
       "type": "string",
       "required": true
     },
-    "label": {
+    "href": {
       "type": "string",
       "required": true
     },

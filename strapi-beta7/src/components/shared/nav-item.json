@@ -7,22 +7,22 @@
   },
   "options": {},
   "attributes": {
-    "href": {
+    "label": {
       "type": "string",
       "required": true
     },
-    "label": {
+    "href": {
       "type": "string",
       "required": true
     },
     "target": {
       "type": "enumeration",
       "enum": ["_blank"]
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
     }
-  },
-  "children": {
-    "type": "component",
-    "repeatable": true,
-    "component": "links.link"
   }
 }
