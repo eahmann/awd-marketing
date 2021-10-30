@@ -34,15 +34,16 @@ const SimpleJustified: React.FC<ICtaBlock> = ({
   title,
   text,
   buttons,
-  settings,
+  theme,
 }): JSX.Element => {
-  const { theme, marginTop, marginBottom } = settings
-
   return (
-    <section
-      className={classNames({ "mt-20": marginTop }, { "mb-20": marginBottom })}
-    >
-      <div className={getBackgroundColor(theme)}>
+    <section>
+      <div
+        className={classNames(
+          getBackgroundColor(theme),
+          "my-20 mx-6 shadow-md rounded-md"
+        )}
+      >
         <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-20 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             <span className={classNames("block", getTitleColor(theme))}>

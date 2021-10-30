@@ -6,11 +6,10 @@ const templates = {
   simple_justified: SimpleJustified,
 }
 
-const CallToAction = ({ settings, ...rest }) => {
-  const Block = templates[settings.template]
+const CallToAction = ({ template, ...rest }) => {
+  const Block = templates[template]
   const props = {
     ...rest,
-    settings,
   }
 
   return Block ? <Block {...props} /> : null

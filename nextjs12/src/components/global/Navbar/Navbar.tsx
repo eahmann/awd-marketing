@@ -32,7 +32,7 @@ const Navbar: React.FC<Props> = ({ navbar, pageContext }) => {
   }, [mobileMenuIsShown])
 
   return (
-    <Popover className="relative border-t-4 border-b border-gray-200 bg-gray-50 border-t-brand-500">
+    <Popover className="relative border-t-4 bg-brand-100 border-t-brand-500">
       {({ open }) => (
         <>
           <Popover.Overlay
@@ -53,7 +53,7 @@ const Navbar: React.FC<Props> = ({ navbar, pageContext }) => {
                       <NextImage width="75" height="45" media={navbar.logo} />
                     </div>
                     <div className="lt-md:hidden max-h-75px">
-                      <NextImage width="120" height="75" media={navbar.logo} />
+                      <NextImage width="200" height="75" media={navbar.logo} />
                     </div>
                   </a>
                 </Link>

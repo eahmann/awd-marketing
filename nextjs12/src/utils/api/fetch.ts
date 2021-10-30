@@ -28,13 +28,14 @@ export async function fetchAPI(path, options = {}) {
     console.log("Cache miss")
     const response = await fetch(requestUrl, mergedOptions)
 
-    const data = await response.json()
-    cache.put(requestUrl, data, 300000)
-
     if (!response.ok) {
       console.error(response.statusText)
       throw new Error(`An error occured please try again`)
     }
+
+    const data = await response.json()
+    cache.put(requestUrl, data, 30)
+
     return data
   }
 }

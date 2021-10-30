@@ -18,17 +18,14 @@ const Footer = ({
   pageContext,
 }) => {
   return (
-    <footer
-      className="border-t border-gray-200 bg-gray-50"
-      aria-labelledby="footer-heading"
-    >
+    <footer className="bg-brand-100" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <NextImage width="120" height="80" media={logo} />
+            <NextImage width="220" height="80" media={logo} />
             <p className="text-base text-gray-500">{smallText}</p>
             <div className="flex space-x-6">
               {social.facebook && (
@@ -93,10 +90,9 @@ const Footer = ({
           </div>
         </div>
         <LocaleSwitch pageContext={pageContext} />
-        <div className="pt-8 mt-12 border-t border-gray-200">
+        <div className="pt-8 mt-12">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; 2021 Hisken Construction, Inc. All rights reserved. Website
-            by Ahmann Web Development
+            &copy; 2021 Atomic Web Development All rights reserved.
           </p>
         </div>
       </div>

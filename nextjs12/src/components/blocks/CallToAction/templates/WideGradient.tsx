@@ -32,18 +32,11 @@ const WideGradient: React.FC<ICtaBlock> = ({
   title,
   text,
   buttons,
-  settings,
+  theme,
 }): JSX.Element => {
-  const { theme, marginTop, marginBottom } = settings
-
   return (
     <section
-      className={classNames(
-        getBackgroundColor(theme),
-        "shadow-2xl mx-auto",
-        { "mt-20": marginTop },
-        { "mb-20": marginBottom }
-      )}
+      className={classNames(getBackgroundColor(theme), "shadow-2xl mx-auto ")}
     >
       <div className="max-w-3xl px-4 py-16 mx-auto text-center sm:py-20 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
