@@ -33,17 +33,6 @@
       },
       "type": "string"
     },
-    "metadata": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.seo",
-      "required": true
-    },
     "blocks": {
       "pluginOptions": {
         "i18n": {
@@ -65,13 +54,16 @@
       ],
       "required": true
     },
-    "publish_at": {
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "datetime"
+      "component": "shared.seo",
+      "required": true
     }
   }
 }

@@ -7,6 +7,23 @@
   },
   "options": {},
   "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "brand",
+        "primary",
+        "secondary",
+        "muted",
+        "white"
+      ]
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "wide_gradient",
+        "simple_justified"
+      ]
+    },
     "title": {
       "type": "string"
     },
@@ -17,12 +34,6 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.button"
-    },
-    "settings": {
-      "type": "component",
-      "repeatable": false,
-      "component": "settings.cta-block-settings",
-      "required": true
     }
   }
 }

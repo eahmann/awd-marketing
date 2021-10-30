@@ -518,8 +518,8 @@
         "required": [
           "id",
           "title",
-          "metadata",
-          "blocks"
+          "blocks",
+          "metadata"
         ],
         "properties": {
           "id": {
@@ -530,109 +530,6 @@
           },
           "slug": {
             "type": "string"
-          },
-          "metadata": {
-            "type": "object",
-            "required": [
-              "id",
-              "metaTitle",
-              "metaDescription"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string"
-              },
-              "metaDescription": {
-                "type": "string"
-              },
-              "shareImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "twitterCardType": {
-                "type": "string",
-                "default": "summary",
-                "enum": [
-                  "summary",
-                  "summary_large_image",
-                  "app",
-                  "player"
-                ]
-              },
-              "twitterUsername": {
-                "type": "string"
-              },
-              "preventIndexing": {
-                "type": "boolean",
-                "default": false
-              }
-            }
           },
           "blocks": {
             "type": "array",
@@ -779,6 +676,23 @@
                     "id": {
                       "type": "string"
                     },
+                    "theme": {
+                      "type": "string",
+                      "enum": [
+                        "brand",
+                        "primary",
+                        "secondary",
+                        "muted",
+                        "white"
+                      ]
+                    },
+                    "template": {
+                      "type": "string",
+                      "enum": [
+                        "wide_gradient",
+                        "simple_justified"
+                      ]
+                    },
                     "title": {
                       "type": "string"
                     },
@@ -849,49 +763,10 @@
                           }
                         }
                       }
-                    },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "marginTop",
-                        "marginBottom"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "theme": {
-                          "type": "string",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted",
-                            "white"
-                          ]
-                        },
-                        "marginTop": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "marginBottom": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "template": {
-                          "type": "string",
-                          "enum": [
-                            "wide_gradient",
-                            "simple_justified"
-                          ]
-                        }
-                      }
                     }
                   },
                   "required": [
-                    "id",
-                    "settings"
+                    "id"
                   ]
                 },
                 {
@@ -1804,9 +1679,108 @@
               ]
             }
           },
-          "publish_at": {
-            "type": "string",
-            "format": "date-time"
+          "metadata": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaTitle",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "metaTitle": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              },
+              "shareImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "twitterCardType": {
+                "type": "string",
+                "default": "summary",
+                "enum": [
+                  "summary",
+                  "summary_large_image",
+                  "app",
+                  "player"
+                ]
+              },
+              "twitterUsername": {
+                "type": "string"
+              },
+              "preventIndexing": {
+                "type": "boolean",
+                "default": false
+              }
+            }
           },
           "localizations": {
             "type": "array",
@@ -1814,8 +1788,8 @@
               "required": [
                 "id",
                 "title",
-                "metadata",
-                "blocks"
+                "blocks",
+                "metadata"
               ],
               "properties": {
                 "id": {
@@ -1827,14 +1801,11 @@
                 "slug": {
                   "type": "string"
                 },
-                "metadata": {
-                  "type": "component"
-                },
                 "blocks": {
                   "type": "dynamiczone"
                 },
-                "publish_at": {
-                  "type": "string"
+                "metadata": {
+                  "type": "component"
                 },
                 "localizations": {
                   "type": "array",
@@ -1869,8 +1840,8 @@
       "NewPage": {
         "required": [
           "title",
-          "metadata",
-          "blocks"
+          "blocks",
+          "metadata"
         ],
         "properties": {
           "title": {
@@ -1878,109 +1849,6 @@
           },
           "slug": {
             "type": "string"
-          },
-          "metadata": {
-            "type": "object",
-            "required": [
-              "id",
-              "metaTitle",
-              "metaDescription"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string"
-              },
-              "metaDescription": {
-                "type": "string"
-              },
-              "shareImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "twitterCardType": {
-                "type": "string",
-                "default": "summary",
-                "enum": [
-                  "summary",
-                  "summary_large_image",
-                  "app",
-                  "player"
-                ]
-              },
-              "twitterUsername": {
-                "type": "string"
-              },
-              "preventIndexing": {
-                "type": "boolean",
-                "default": false
-              }
-            }
           },
           "blocks": {
             "type": "array",
@@ -2127,6 +1995,23 @@
                     "id": {
                       "type": "string"
                     },
+                    "theme": {
+                      "type": "string",
+                      "enum": [
+                        "brand",
+                        "primary",
+                        "secondary",
+                        "muted",
+                        "white"
+                      ]
+                    },
+                    "template": {
+                      "type": "string",
+                      "enum": [
+                        "wide_gradient",
+                        "simple_justified"
+                      ]
+                    },
                     "title": {
                       "type": "string"
                     },
@@ -2197,49 +2082,10 @@
                           }
                         }
                       }
-                    },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "marginTop",
-                        "marginBottom"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "theme": {
-                          "type": "string",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted",
-                            "white"
-                          ]
-                        },
-                        "marginTop": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "marginBottom": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "template": {
-                          "type": "string",
-                          "enum": [
-                            "wide_gradient",
-                            "simple_justified"
-                          ]
-                        }
-                      }
                     }
                   },
                   "required": [
-                    "id",
-                    "settings"
+                    "id"
                   ]
                 },
                 {
@@ -3152,9 +2998,108 @@
               ]
             }
           },
-          "publish_at": {
-            "type": "string",
-            "format": "date-time"
+          "metadata": {
+            "type": "object",
+            "required": [
+              "id",
+              "metaTitle",
+              "metaDescription"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "metaTitle": {
+                "type": "string"
+              },
+              "metaDescription": {
+                "type": "string"
+              },
+              "shareImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "twitterCardType": {
+                "type": "string",
+                "default": "summary",
+                "enum": [
+                  "summary",
+                  "summary_large_image",
+                  "app",
+                  "player"
+                ]
+              },
+              "twitterUsername": {
+                "type": "string"
+              },
+              "preventIndexing": {
+                "type": "boolean",
+                "default": false
+              }
+            }
           },
           "localizations": {
             "type": "array",
