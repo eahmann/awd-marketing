@@ -15,7 +15,7 @@ const LocaleSwitch = ({ pageContext }) => {
   const isMounted = useRef(false)
   const select = useRef()
   const router = useRouter()
-  const [locale, setLocale] = useState()
+  const [locale, setLocale] = useState("")
   const [showing, setShowing] = useState(false)
 
   const handleLocaleChange = async (selectedLocale) => {

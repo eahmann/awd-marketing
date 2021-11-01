@@ -18,7 +18,7 @@ const Footer = ({
   pageContext,
 }) => {
   return (
-    <footer className="bg-brand-100" aria-labelledby="footer-heading">
+    <footer className="" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
