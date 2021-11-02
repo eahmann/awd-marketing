@@ -1,6 +1,5 @@
 import classNames from "classnames"
 
-import ButtonLink from "@/components/shared/ButtonLink"
 import NextImage from "@/components/shared/NextImage/NextImage"
 
 const Hero = ({ image, title, label, text, buttons, settings }) => {
@@ -41,7 +40,7 @@ const Hero = ({ image, title, label, text, buttons, settings }) => {
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 max-w-8xl">
             <div className="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
               <div className="lg:py-24">
-                <div className="uppercase text-brand-500 font-bold sm:text-base lg:text-sm xl:text-base">
+                <div className="font-bold uppercase text-brand-500 sm:text-base lg:text-sm xl:text-base">
                   <span className="text-md">{label}</span>
                 </div>
                 <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
