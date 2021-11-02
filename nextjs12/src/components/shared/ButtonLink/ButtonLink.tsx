@@ -54,11 +54,11 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
             "shadow-none": !shadow,
           },
           {
-            "border-transparent bg-primary-500 text-white text-opacity-90 hover:text-opacity-100 hover:bg-primary-400":
+            "border-transparent bg-primary-700 text-white text-opacity-90 hover:text-opacity-100 hover:bg-primary-600":
               appearance === "primary",
           },
           {
-            "border-primary-500 bg-gray-50 text-primary-800 hover:bg-primary-25":
+            "border-primary-300 bg-gray-50 text-primary-800 hover:bg-primary-25":
               appearance === "primary-outline",
           },
           {

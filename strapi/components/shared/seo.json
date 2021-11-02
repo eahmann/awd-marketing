@@ -31,7 +31,7 @@
         "app",
         "player"
       ],
-      "default": "summary"
+      "default": "summary_large_image"
     },
     "twitterUsername": {
       "type": "string"

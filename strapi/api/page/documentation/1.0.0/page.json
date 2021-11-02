@@ -906,9 +906,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -920,13 +918,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -1569,9 +1565,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -1583,13 +1577,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -1765,7 +1757,7 @@
               },
               "twitterCardType": {
                 "type": "string",
-                "default": "summary",
+                "default": "summary_large_image",
                 "enum": [
                   "summary",
                   "summary_large_image",
@@ -2225,9 +2217,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -2239,13 +2229,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -2888,9 +2876,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -2902,13 +2888,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -3084,7 +3068,7 @@
               },
               "twitterCardType": {
                 "type": "string",
-                "default": "summary",
+                "default": "summary_large_image",
                 "enum": [
                   "summary",
                   "summary_large_image",

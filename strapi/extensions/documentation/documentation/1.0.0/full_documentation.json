@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/29/2021 10:50:18 PM"
+    "x-generation-date": "11/02/2021 9:45:36 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4855,9 +4855,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -4869,13 +4867,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -5050,9 +5046,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -5064,13 +5058,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -5475,9 +5467,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -5489,13 +5479,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -5670,9 +5658,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -5684,13 +5670,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -6273,9 +6257,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -6287,13 +6269,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -6936,9 +6916,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -6950,13 +6928,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -7132,7 +7108,7 @@
               },
               "twitterCardType": {
                 "type": "string",
-                "default": "summary",
+                "default": "summary_large_image",
                 "enum": [
                   "summary",
                   "summary_large_image",
@@ -7592,9 +7568,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -7606,13 +7580,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -8255,9 +8227,7 @@
                             "required": [
                               "id",
                               "href",
-                              "label",
-                              "isExternal",
-                              "newTab"
+                              "label"
                             ],
                             "properties": {
                               "id": {
@@ -8269,13 +8239,11 @@
                               "label": {
                                 "type": "string"
                               },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
                               }
                             }
                           }
@@ -8451,7 +8419,7 @@
               },
               "twitterCardType": {
                 "type": "string",
-                "default": "summary",
+                "default": "summary_large_image",
                 "enum": [
                   "summary",
                   "summary_large_image",

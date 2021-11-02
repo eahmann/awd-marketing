@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_label_title_text_links",
+  "info": {
+    "name": "LabelTitleTextLinks",
+    "icon": "database",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}

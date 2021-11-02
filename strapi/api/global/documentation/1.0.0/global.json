@@ -429,9 +429,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -443,13 +441,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -624,9 +620,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -638,13 +632,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -1049,9 +1041,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -1063,13 +1053,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -1244,9 +1232,7 @@
                         "required": [
                           "id",
                           "href",
-                          "label",
-                          "isExternal",
-                          "newTab"
+                          "label"
                         ],
                         "properties": {
                           "id": {
@@ -1258,13 +1244,11 @@
                           "label": {
                             "type": "string"
                           },
-                          "isExternal": {
-                            "type": "boolean",
-                            "default": false
-                          },
-                          "newTab": {
-                            "type": "boolean",
-                            "default": false
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
