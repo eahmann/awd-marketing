@@ -18,7 +18,7 @@ const navigation = [
 const NavbarV2 = ({ navbar, pageContext }) => {
   return (
     <Popover as="header" className="relative">
-      <div className="pb-4">
+      <div className="pb-4 pt-2">
         <nav
           className="relative flex items-center justify-between px-4 mx-auto max-w-8xl sm:px-2"
           aria-label="Global"

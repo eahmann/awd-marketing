@@ -37,7 +37,7 @@ const ContactUsForm = ({ contactInfo }) => {
 
   return (
     <>
-      <div className="px-4 pb-12 overflow-hidden bg-white sm:px-6 lg:px-8 sm:pb-16">
+      <div className="px-4 pb-12 overflow-hidden sm:px-6 lg:px-8 sm:pb-16">
         <div className="relative max-w-xl mx-auto">
           <div className="">
             <Formik
