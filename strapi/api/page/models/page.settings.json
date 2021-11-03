@@ -50,7 +50,8 @@
         "blocks.title-and-text",
         "blocks.hero",
         "blocks.feature-group",
-        "blocks.global-contact-info"
+        "blocks.global-contact-info",
+        "blocks.hero-v2"
       ],
       "required": true
     },

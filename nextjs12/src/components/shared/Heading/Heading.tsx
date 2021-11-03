@@ -15,12 +15,7 @@ const getAlignment = (alignment) => {
 
 const Heading: React.FC<IHeading> = ({ title, text, label, alignment }) => {
   return (
-    <div
-      className={classNames(
-        "mx-auto max-w-sm sm:max-w-7xl px-8",
-        getAlignment(alignment)
-      )}
-    >
+    <div className={classNames("mx-auto px-8", getAlignment(alignment))}>
       {label && (
         <>
           <span className="text-base font-semibold tracking-wide text-transparent uppercase bg-clip-text bg-gradient-to-b from-brand-400 to-brand-500">

@@ -461,7 +461,7 @@
                     "id",
                     "href",
                     "label",
-                    "settings"
+                    "theme"
                   ],
                   "properties": {
                     "id": {
@@ -473,47 +473,28 @@
                     "label": {
                       "type": "string"
                     },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "isExternal",
-                        "newTab",
-                        "theme",
-                        "outline",
-                        "shadow"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "isExternal": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "newTab": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "theme": {
-                          "type": "string",
-                          "default": "brand",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted"
-                          ]
-                        },
-                        "outline": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "shadow": {
-                          "type": "boolean",
-                          "default": true
-                        }
-                      }
+                    "theme": {
+                      "type": "string",
+                      "default": "brand_shadow",
+                      "enum": [
+                        "brand",
+                        "brand_shadow",
+                        "brand_outline",
+                        "primary",
+                        "primary_shadow",
+                        "primary_outline",
+                        "secondary",
+                        "muted",
+                        "dark",
+                        "dark_shadow",
+                        "dark_outline"
+                      ]
+                    },
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     }
                   }
                 }
@@ -1073,7 +1054,7 @@
                     "id",
                     "href",
                     "label",
-                    "settings"
+                    "theme"
                   ],
                   "properties": {
                     "id": {
@@ -1085,47 +1066,28 @@
                     "label": {
                       "type": "string"
                     },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "isExternal",
-                        "newTab",
-                        "theme",
-                        "outline",
-                        "shadow"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "isExternal": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "newTab": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "theme": {
-                          "type": "string",
-                          "default": "brand",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted"
-                          ]
-                        },
-                        "outline": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "shadow": {
-                          "type": "boolean",
-                          "default": true
-                        }
-                      }
+                    "theme": {
+                      "type": "string",
+                      "default": "brand_shadow",
+                      "enum": [
+                        "brand",
+                        "brand_shadow",
+                        "brand_outline",
+                        "primary",
+                        "primary_shadow",
+                        "primary_outline",
+                        "secondary",
+                        "muted",
+                        "dark",
+                        "dark_shadow",
+                        "dark_outline"
+                      ]
+                    },
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     }
                   }
                 }

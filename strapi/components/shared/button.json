@@ -15,11 +15,29 @@
       "type": "string",
       "required": true
     },
-    "settings": {
-      "type": "component",
-      "repeatable": false,
-      "component": "settings.button-settings",
-      "required": true
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "brand",
+        "brand_shadow",
+        "brand_outline",
+        "primary",
+        "primary_shadow",
+        "primary_outline",
+        "secondary",
+        "muted",
+        "dark",
+        "dark_shadow",
+        "dark_outline"
+      ],
+      "required": true,
+      "default": "brand_shadow"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_blank"
+      ]
     }
   }
 }

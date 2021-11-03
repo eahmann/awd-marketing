@@ -38,33 +38,40 @@ const SimpleJustified: React.FC<ICtaBlock> = ({
 }): JSX.Element => {
   return (
     <section>
-      <div
-        className={classNames(
-          getBackgroundColor(theme),
-          "my-20 mx-6 shadow-md rounded-md"
-        )}
-      >
-        <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-20 lg:px-8 lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            <span className={classNames("block", getTitleColor(theme))}>
-              {title}
-            </span>
-            {text && (
+      <div className="mx-6">
+        <div
+          className={classNames(
+            getBackgroundColor(theme),
+            "mb-20 shadow-md rounded-md max-w-8xl mx-auto"
+          )}
+        >
+          <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-20 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               <span
-                className={classNames("block text-2xl", getTextColor(theme))}
+                className={classNames(
+                  "block break-words",
+                  getTitleColor(theme)
+                )}
               >
-                {text}
+                {title}
               </span>
-            )}
-          </h2>
-          <div className="flex flex-wrap mt-8 lg:mt-0 lg:flex-shrink-0">
-            {buttons.map((button) => (
-              <ButtonLink
-                key={button.id}
-                button={button}
-                className="mt-4 mr-4 last:mr-0 lg:mt-0"
-              />
-            ))}
+              {text && (
+                <span
+                  className={classNames("block text-2xl", getTextColor(theme))}
+                >
+                  {text}
+                </span>
+              )}
+            </h2>
+            <div className="flex flex-wrap mt-8 lg:mt-0 lg:flex-shrink-0">
+              {buttons.map((button) => (
+                <ButtonLink
+                  key={button.id}
+                  button={button}
+                  className="mt-4 mr-4 last:mr-0 lg:mt-0"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

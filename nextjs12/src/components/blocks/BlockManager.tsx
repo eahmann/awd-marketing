@@ -10,7 +10,7 @@ import ImageGallery from "@/components/blocks/ImageGallery"
 import ServiceCardGroup from "@/components/blocks/ServiceCardGroup"
 
 const blockComponents = {
-  "blocks.hero": Hero,
+  "blocks.hero-v2": Hero,
   "blocks.carousel": CarouselBlock,
   "blocks.call-to-action": CallToAction,
   "blocks.contact-us-form": ContactUsForm,

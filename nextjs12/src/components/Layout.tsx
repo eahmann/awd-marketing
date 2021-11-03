@@ -7,11 +7,9 @@ const Layout = ({ children, global, preview, pageContext }) => {
   return (
     <div className="flex flex-col justify-between min-h-screen bg-indigo-500">
       {/* Aligned to the top */}
-      <div className="flex-1">
-        {preview && <PreviewBanner />}
-        <NavbarV2 navbar={navbar} pageContext={pageContext} />
-        {children}
-      </div>
+      {preview && <PreviewBanner />}
+      <NavbarV2 navbar={navbar} pageContext={pageContext} />
+      <main className="flex-1">{children}</main>
       {/* Aligned to the bottom */}
       <Footer
         contactInfo={contactInfo}

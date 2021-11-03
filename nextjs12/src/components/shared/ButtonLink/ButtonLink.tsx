@@ -9,38 +9,20 @@ interface Props {
   className?: string
 }
 
-function getButtonAppearance(theme, outline) {
-  if (theme === "primary") {
-    if (outline) {
-      return "primary-outline"
-    }
-    return "primary"
-  }
-  if (theme === "brand") {
-    if (outline) {
-      return "brand-outline"
-    }
-    return "brand"
-  }
-  if (theme === "secondary") {
-    if (outline) {
-      return "secondary-outline"
-    }
-    return "secondary"
-  }
-  if (theme === "muted") {
-    if (outline) {
-      return "muted-outline"
-    }
-    return "muted"
-  }
-}
-
 const ButtonLink: React.FC<Props> = ({ button, className }) => {
-  const { label, settings } = button
-  const { theme, outline, shadow } = settings
+  const { label, theme } = button
 
-  const appearance = getButtonAppearance(theme, outline)
+  const shadow = theme.endsWith("shadow")
+
+  const getButtonAppearance = (theme, shadow): string => {
+    if (shadow) {
+      return theme.split("_shadow")[0]
+    } else {
+      return theme
+    }
+  }
+
+  const appearance = getButtonAppearance(theme, shadow)
 
   return (
     <CustomLink link={button} className={classNames(" text-center", className)}>
@@ -59,7 +41,7 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
           },
           {
             "border-primary-300 bg-gray-50 text-primary-800 hover:bg-primary-25":
-              appearance === "primary-outline",
+              appearance === "primary_outline",
           },
           {
             "border-transparent bg-secondary-500 text-white text-opacity-90 hover:text-opacity-100 hover:bg-secondary-400":
@@ -75,7 +57,7 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
           },
           {
             "border-2 border-brand-500 bg-gray-50 text-brand-800 text-opacity-90 hover:text-opacity-100 hover:bg-brand-25":
-              appearance === "brand-outline",
+              appearance === "brand_outline",
           },
           {
             "border-transparent bg-gray-50 text-gray-800 hover:bg-gray-200":

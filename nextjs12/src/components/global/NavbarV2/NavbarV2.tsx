@@ -28,10 +28,13 @@ const NavbarV2 = ({ navbar, pageContext }) => {
             <div className="flex items-center justify-between w-full md:w-auto">
               <Link href="/">
                 <a>
-                <span className="sr-only">Workflow</span>
-                <div className="w-auto h-8 sm:h-20">
-                  <NextImage width="275" height="75" media={navbar.logo} />
-                </div>
+                  <span className="sr-only">Workflow</span>
+                  <div className="w-auto h-8 sm:h-20 md:hidden">
+                    <NextImage width="200" height="75" media={navbar.logo} />
+                  </div>
+                  <div className="hidden w-auto h-8 md:block sm:h-20">
+                    <NextImage width="275" height="75" media={navbar.logo} />
+                  </div>
                 </a>
               </Link>
               <div className="flex items-center -mr-2 md:hidden">

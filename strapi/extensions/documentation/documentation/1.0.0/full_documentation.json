@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/02/2021 9:45:36 AM"
+    "x-generation-date": "11/02/2021 11:52:33 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4887,7 +4887,7 @@
                     "id",
                     "href",
                     "label",
-                    "settings"
+                    "theme"
                   ],
                   "properties": {
                     "id": {
@@ -4899,47 +4899,28 @@
                     "label": {
                       "type": "string"
                     },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "isExternal",
-                        "newTab",
-                        "theme",
-                        "outline",
-                        "shadow"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "isExternal": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "newTab": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "theme": {
-                          "type": "string",
-                          "default": "brand",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted"
-                          ]
-                        },
-                        "outline": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "shadow": {
-                          "type": "boolean",
-                          "default": true
-                        }
-                      }
+                    "theme": {
+                      "type": "string",
+                      "default": "brand_shadow",
+                      "enum": [
+                        "brand",
+                        "brand_shadow",
+                        "brand_outline",
+                        "primary",
+                        "primary_shadow",
+                        "primary_outline",
+                        "secondary",
+                        "muted",
+                        "dark",
+                        "dark_shadow",
+                        "dark_outline"
+                      ]
+                    },
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     }
                   }
                 }
@@ -5499,7 +5480,7 @@
                     "id",
                     "href",
                     "label",
-                    "settings"
+                    "theme"
                   ],
                   "properties": {
                     "id": {
@@ -5511,47 +5492,28 @@
                     "label": {
                       "type": "string"
                     },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "isExternal",
-                        "newTab",
-                        "theme",
-                        "outline",
-                        "shadow"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "isExternal": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "newTab": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "theme": {
-                          "type": "string",
-                          "default": "brand",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted"
-                          ]
-                        },
-                        "outline": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "shadow": {
-                          "type": "boolean",
-                          "default": true
-                        }
-                      }
+                    "theme": {
+                      "type": "string",
+                      "default": "brand_shadow",
+                      "enum": [
+                        "brand",
+                        "brand_shadow",
+                        "brand_outline",
+                        "primary",
+                        "primary_shadow",
+                        "primary_outline",
+                        "secondary",
+                        "muted",
+                        "dark",
+                        "dark_shadow",
+                        "dark_outline"
+                      ]
+                    },
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     }
                   }
                 }
@@ -5900,7 +5862,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6021,7 +5984,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6058,7 +6022,7 @@
                           "id",
                           "href",
                           "label",
-                          "settings"
+                          "theme"
                         ],
                         "properties": {
                           "id": {
@@ -6070,47 +6034,28 @@
                           "label": {
                             "type": "string"
                           },
-                          "settings": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "isExternal",
-                              "newTab",
-                              "theme",
-                              "outline",
-                              "shadow"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "theme": {
-                                "type": "string",
-                                "default": "brand",
-                                "enum": [
-                                  "brand",
-                                  "primary",
-                                  "secondary",
-                                  "muted"
-                                ]
-                              },
-                              "outline": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "shadow": {
-                                "type": "boolean",
-                                "default": true
-                              }
-                            }
+                          "theme": {
+                            "type": "string",
+                            "default": "brand_shadow",
+                            "enum": [
+                              "brand",
+                              "brand_shadow",
+                              "brand_outline",
+                              "primary",
+                              "primary_shadow",
+                              "primary_outline",
+                              "secondary",
+                              "muted",
+                              "dark",
+                              "dark_shadow",
+                              "dark_outline"
+                            ]
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -6134,7 +6079,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6162,7 +6108,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6321,7 +6268,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6391,7 +6339,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6512,7 +6461,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6591,7 +6541,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6681,7 +6632,7 @@
                           "id",
                           "href",
                           "label",
-                          "settings"
+                          "theme"
                         ],
                         "properties": {
                           "id": {
@@ -6693,47 +6644,28 @@
                           "label": {
                             "type": "string"
                           },
-                          "settings": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "isExternal",
-                              "newTab",
-                              "theme",
-                              "outline",
-                              "shadow"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "theme": {
-                                "type": "string",
-                                "default": "brand",
-                                "enum": [
-                                  "brand",
-                                  "primary",
-                                  "secondary",
-                                  "muted"
-                                ]
-                              },
-                              "outline": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "shadow": {
-                                "type": "boolean",
-                                "default": true
-                              }
-                            }
+                          "theme": {
+                            "type": "string",
+                            "default": "brand_shadow",
+                            "enum": [
+                              "brand",
+                              "brand_shadow",
+                              "brand_outline",
+                              "primary",
+                              "primary_shadow",
+                              "primary_outline",
+                              "secondary",
+                              "muted",
+                              "dark",
+                              "dark_shadow",
+                              "dark_outline"
+                            ]
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       },
@@ -6788,7 +6720,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -6998,7 +6931,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7017,6 +6951,157 @@
                     "id",
                     "marginTop",
                     "marginBottom"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blocks.carousel",
+                        "blocks.call-to-action",
+                        "blocks.contact-us-form",
+                        "blocks.service-card-group",
+                        "blocks.faq",
+                        "blocks.image-gallery",
+                        "blocks.title-and-text",
+                        "blocks.hero",
+                        "blocks.feature-group",
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "subtitle": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "buttons": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "href",
+                          "label",
+                          "theme"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "theme": {
+                            "type": "string",
+                            "default": "brand_shadow",
+                            "enum": [
+                              "brand",
+                              "brand_shadow",
+                              "brand_outline",
+                              "primary",
+                              "primary_shadow",
+                              "primary_outline",
+                              "secondary",
+                              "muted",
+                              "dark",
+                              "dark_shadow",
+                              "dark_outline"
+                            ]
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
                   ]
                 }
               ]
@@ -7211,7 +7296,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7332,7 +7418,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7369,7 +7456,7 @@
                           "id",
                           "href",
                           "label",
-                          "settings"
+                          "theme"
                         ],
                         "properties": {
                           "id": {
@@ -7381,47 +7468,28 @@
                           "label": {
                             "type": "string"
                           },
-                          "settings": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "isExternal",
-                              "newTab",
-                              "theme",
-                              "outline",
-                              "shadow"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "theme": {
-                                "type": "string",
-                                "default": "brand",
-                                "enum": [
-                                  "brand",
-                                  "primary",
-                                  "secondary",
-                                  "muted"
-                                ]
-                              },
-                              "outline": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "shadow": {
-                                "type": "boolean",
-                                "default": true
-                              }
-                            }
+                          "theme": {
+                            "type": "string",
+                            "default": "brand_shadow",
+                            "enum": [
+                              "brand",
+                              "brand_shadow",
+                              "brand_outline",
+                              "primary",
+                              "primary_shadow",
+                              "primary_outline",
+                              "secondary",
+                              "muted",
+                              "dark",
+                              "dark_shadow",
+                              "dark_outline"
+                            ]
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       }
@@ -7445,7 +7513,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7473,7 +7542,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7632,7 +7702,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7702,7 +7773,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7823,7 +7895,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7902,7 +7975,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -7992,7 +8066,7 @@
                           "id",
                           "href",
                           "label",
-                          "settings"
+                          "theme"
                         ],
                         "properties": {
                           "id": {
@@ -8004,47 +8078,28 @@
                           "label": {
                             "type": "string"
                           },
-                          "settings": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "isExternal",
-                              "newTab",
-                              "theme",
-                              "outline",
-                              "shadow"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "isExternal": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "newTab": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "theme": {
-                                "type": "string",
-                                "default": "brand",
-                                "enum": [
-                                  "brand",
-                                  "primary",
-                                  "secondary",
-                                  "muted"
-                                ]
-                              },
-                              "outline": {
-                                "type": "boolean",
-                                "default": false
-                              },
-                              "shadow": {
-                                "type": "boolean",
-                                "default": true
-                              }
-                            }
+                          "theme": {
+                            "type": "string",
+                            "default": "brand_shadow",
+                            "enum": [
+                              "brand",
+                              "brand_shadow",
+                              "brand_outline",
+                              "primary",
+                              "primary_shadow",
+                              "primary_outline",
+                              "secondary",
+                              "muted",
+                              "dark",
+                              "dark_shadow",
+                              "dark_outline"
+                            ]
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
                           }
                         }
                       },
@@ -8099,7 +8154,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -8309,7 +8365,8 @@
                         "blocks.title-and-text",
                         "blocks.hero",
                         "blocks.feature-group",
-                        "blocks.global-contact-info"
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
                       ]
                     },
                     "id": {
@@ -8328,6 +8385,157 @@
                     "id",
                     "marginTop",
                     "marginBottom"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blocks.carousel",
+                        "blocks.call-to-action",
+                        "blocks.contact-us-form",
+                        "blocks.service-card-group",
+                        "blocks.faq",
+                        "blocks.image-gallery",
+                        "blocks.title-and-text",
+                        "blocks.hero",
+                        "blocks.feature-group",
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "required": [
+                        "id",
+                        "name",
+                        "hash",
+                        "mime",
+                        "size",
+                        "url",
+                        "provider"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "alternativeText": {
+                          "type": "string"
+                        },
+                        "caption": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        },
+                        "height": {
+                          "type": "integer"
+                        },
+                        "formats": {
+                          "type": "object"
+                        },
+                        "hash": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "mime": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "previewUrl": {
+                          "type": "string"
+                        },
+                        "provider": {
+                          "type": "string"
+                        },
+                        "provider_metadata": {
+                          "type": "object"
+                        },
+                        "related": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "subtitle": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "buttons": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "href",
+                          "label",
+                          "theme"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "theme": {
+                            "type": "string",
+                            "default": "brand_shadow",
+                            "enum": [
+                              "brand",
+                              "brand_shadow",
+                              "brand_outline",
+                              "primary",
+                              "primary_shadow",
+                              "primary_outline",
+                              "secondary",
+                              "muted",
+                              "dark",
+                              "dark_shadow",
+                              "dark_outline"
+                            ]
+                          },
+                          "target": {
+                            "type": "string",
+                            "enum": [
+                              "_blank"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
                   ]
                 }
               ]
