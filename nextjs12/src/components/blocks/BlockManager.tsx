@@ -7,7 +7,9 @@ import FeatureGroup from "@/components/blocks/FeatureGroup"
 import GlobalContactInfo from "@/components/blocks/GlobalContactInfo"
 import Hero from "@/components/blocks/Hero"
 import ImageGallery from "@/components/blocks/ImageGallery"
-import ServiceCardGroup from "@/components/blocks/ServiceCardGroup"
+
+import Pricing from "./Pricing"
+import ServiceCardGroup from "./ServiceCardGroup"
 
 const blockComponents = {
   "blocks.hero-v2": Hero,
@@ -20,6 +22,7 @@ const blockComponents = {
   "blocks.title-and-text": CenteredTitleAndText,
   "blocks.feature-group": FeatureGroup,
   "blocks.global-contact-info": GlobalContactInfo,
+  "blocks.pricing": Pricing,
 }
 
 const getBlockComponent = ({ __component, ...rest }, index) => {
