@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_elements_plans",
+  "info": {
+    "name": "Plan",
+    "icon": "surprise",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "planFeature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.plan-feature"
+    },
+    "isRecomended": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "pricePeriod": {
+      "type": "string",
+      "default": "month"
+    },
+    "basePrice": {
+      "type": "string"
+    }
+  }
+}

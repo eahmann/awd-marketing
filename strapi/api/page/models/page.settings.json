@@ -51,7 +51,8 @@
         "blocks.hero",
         "blocks.feature-group",
         "blocks.global-contact-info",
-        "blocks.hero-v2"
+        "blocks.hero-v2",
+        "blocks.pricing"
       ],
       "required": true
     },

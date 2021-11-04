@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_plan_features",
+  "info": {
+    "name": "Plan feature",
+    "icon": "balance-scale-left"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "included": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

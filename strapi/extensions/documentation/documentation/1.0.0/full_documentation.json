@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/02/2021 11:52:33 PM"
+    "x-generation-date": "11/03/2021 11:24:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5863,7 +5863,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -5985,7 +5986,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6080,7 +6082,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6109,7 +6112,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6269,7 +6273,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6340,7 +6345,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6462,7 +6468,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6542,7 +6549,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6721,7 +6729,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6932,7 +6941,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -6968,7 +6978,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7095,6 +7106,98 @@
                             "enum": [
                               "_blank"
                             ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blocks.carousel",
+                        "blocks.call-to-action",
+                        "blocks.contact-us-form",
+                        "blocks.service-card-group",
+                        "blocks.faq",
+                        "blocks.image-gallery",
+                        "blocks.title-and-text",
+                        "blocks.hero",
+                        "blocks.feature-group",
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2",
+                        "blocks.pricing"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "plans": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "planFeature": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "included"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "included": {
+                                  "type": "boolean",
+                                  "default": true
+                                }
+                              }
+                            }
+                          },
+                          "isRecomended": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "price": {
+                            "type": "number"
+                          },
+                          "pricePeriod": {
+                            "type": "string",
+                            "default": "month"
+                          },
+                          "basePrice": {
+                            "type": "string"
                           }
                         }
                       }
@@ -7297,7 +7400,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7419,7 +7523,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7514,7 +7619,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7543,7 +7649,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7703,7 +7810,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7774,7 +7882,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7896,7 +8005,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -7976,7 +8086,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -8155,7 +8266,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -8366,7 +8478,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -8402,7 +8515,8 @@
                         "blocks.hero",
                         "blocks.feature-group",
                         "blocks.global-contact-info",
-                        "blocks.hero-v2"
+                        "blocks.hero-v2",
+                        "blocks.pricing"
                       ]
                     },
                     "id": {
@@ -8529,6 +8643,98 @@
                             "enum": [
                               "_blank"
                             ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blocks.carousel",
+                        "blocks.call-to-action",
+                        "blocks.contact-us-form",
+                        "blocks.service-card-group",
+                        "blocks.faq",
+                        "blocks.image-gallery",
+                        "blocks.title-and-text",
+                        "blocks.hero",
+                        "blocks.feature-group",
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2",
+                        "blocks.pricing"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "plans": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "planFeature": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "id",
+                                "included"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "included": {
+                                  "type": "boolean",
+                                  "default": true
+                                }
+                              }
+                            }
+                          },
+                          "isRecomended": {
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "price": {
+                            "type": "number"
+                          },
+                          "pricePeriod": {
+                            "type": "string",
+                            "default": "month"
+                          },
+                          "basePrice": {
+                            "type": "string"
                           }
                         }
                       }
