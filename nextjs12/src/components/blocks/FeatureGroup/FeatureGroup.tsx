@@ -1,18 +1,13 @@
-import classNames from "classnames"
-import { FiArrowRight } from "react-icons/fi"
-
-import CustomLink from "@/components/shared/CustomLink"
-import Heading from "@/components/shared/Heading"
-import NextImage from "@/components/shared/NextImage"
-import { IHeading } from "@/types/IHeading"
-import LabelTitleText from "@/components/shared/LabelTitleText"
 import {
   AnnotationIcon,
   GlobeAltIcon,
   LightningBoltIcon,
   ScaleIcon,
 } from "@heroicons/react/outline"
+
 import Icon from "@/components/shared/Icon"
+import LabelTitleText from "@/components/shared/LabelTitleText"
+import { IHeading } from "@/types/IHeading"
 
 interface Props {
   heading: IHeading
@@ -54,10 +49,14 @@ const FeatureGroup = ({ label, title, text, features }) => {
             {features.map((feature) => (
               <div key={feature.title} className="relative ">
                 <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white">
-                    <Icon icon={feature.icon} className="h-6 w-6" aria-hidden="true" />
+                  <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-brand-500">
+                    <Icon
+                      icon={feature.icon}
+                      className="w-6 h-6"
+                      aria-hidden="true"
+                    />
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-100">
+                  <p className="ml-16 text-lg font-medium text-gray-100 leading-6">
                     {feature.title}
                   </p>
                 </dt>

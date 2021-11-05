@@ -1436,7 +1436,8 @@
                         "type": "object",
                         "required": [
                           "id",
-                          "title"
+                          "title",
+                          "text"
                         ],
                         "properties": {
                           "id": {
@@ -2824,7 +2825,8 @@
                         "type": "object",
                         "required": [
                           "id",
-                          "title"
+                          "title",
+                          "text"
                         ],
                         "properties": {
                           "id": {

@@ -36,7 +36,7 @@ const Plan = ({
       {pricing.tiers.map((tier) => (
         <div
           key={tier.title}
-          className="relative flex flex-col p-8 bg-white border border-gray-200 rounded-2xl shadow-sm h-full"
+          className="relative flex flex-col h-full p-8 bg-white border border-gray-200 rounded-2xl shadow-sm"
         >
           <div className="flex-1">
             <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
