@@ -24,10 +24,8 @@ const Seo: React.FC<Props> = ({
 
   const metaImageUrl =
     "https://og-image-sgtu87b2h-eahmann.vercel.app/" +
-    titleSuffix +
-    "%0a%0a**" +
     metaTitle +
-    "**.png?theme=dark&md=1&fontSize=100px&images=https://res.cloudinary.com/dkznztisc/image/upload/v1635871244/AWD_branding_lighter_04_e6ccfde704.svg&widths=600&heights=600"
+    "**.png?theme=light&md=1&fontSize=100px&images=https://res.cloudinary.com/dkznztisc/image/upload/v1635871244/AWD_branding_lighter_04_e6ccfde704.svg&widths=600&heights=600"
 
   return (
     <NextSeo
@@ -51,7 +49,7 @@ const Seo: React.FC<Props> = ({
       }}
       // Only included Twitter data if we have it
       twitter={{
-        ...(twitterCardType && { cardType: twitterCardType }),
+        cardType: "summary_large_image",
         // Handle is the twitter username of the content creator
         ...(twitterUsername && { handle: twitterUsername }),
       }}
