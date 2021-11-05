@@ -23,6 +23,13 @@ const Seo: React.FC<Props> = ({
   // Prevent errors if no metadata was set
   if (!metaTitle && !metaDescription) return null
 
+  const metaImageUrl =
+    "https://og-image-sgtu87b2h-eahmann.vercel.app/" +
+    titleSuffix +
+    "%0a%0a**" +
+    metaTitle +
+    "**.png?theme=dark&md=1&fontSize=100px&images=https://res.cloudinary.com/dkznztisc/image/upload/v1635871244/AWD_branding_lighter_04_e6ccfde704.svg&widths=600&heights=600"
+
   return (
     <NextSeo
       title={metaTitle}
@@ -33,15 +40,15 @@ const Seo: React.FC<Props> = ({
         description: metaDescription,
         // Only include OG image if we have it
         // Careful: if you disable image optimization in Strapi, this will break
-        ...(shareImage && {
-          images: Object.values(shareImage.formats).map((image: IImage) => {
-            return {
-              url: getStrapiMedia(image.url),
-              width: image.width,
-              height: image.height,
-            }
-          }),
-        }),
+        images: [
+          {
+            url: metaImageUrl,
+            width: 800,
+            height: 600,
+            alt: "Og Image Alt",
+            type: "image/jpeg",
+          },
+        ],
       }}
       // Only included Twitter data if we have it
       twitter={{
