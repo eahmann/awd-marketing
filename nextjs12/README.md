@@ -1,3 +1,5 @@
+[Tailwind color shades](https://javisperez.github.io/tailwindcolorshades/)
+
 # Next.js Advanced Starter 🚀
 
 An opinionated starter skeleton with advanced features for Next.js.

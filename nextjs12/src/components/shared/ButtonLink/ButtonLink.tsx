@@ -28,23 +28,23 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
     <CustomLink link={button} className={classNames(" text-center", className)}>
       <div
         className={classNames(
-          "border-2 px-6 py-3 text-base font-medium rounded-md w-full ",
+          "px-6 py-3 text-base font-medium rounded-md w-full",
           {
-            "shadow-xl": shadow,
+            "shadow-lg": shadow,
           },
           {
             "shadow-none": !shadow,
           },
           {
-            "border-transparent bg-primary-700 text-white text-opacity-90 hover:text-opacity-100 hover:bg-primary-600":
+            "bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-primary-50 hover:text-opacity-100 hover:from-primary-400":
               appearance === "primary",
           },
           {
-            "border-primary-300 bg-gray-50 text-primary-800 hover:bg-primary-25":
+            "border-2 border-primary-300 bg-primary-700 text-primary-800 hover:bg-primary-25":
               appearance === "primary_outline",
           },
           {
-            "border-transparent bg-secondary-500 text-white text-opacity-90 hover:text-opacity-100 hover:bg-secondary-400":
+            "bg-gradient-to-br from-secondary-500 via-secondary-600 to-secondary-700 text-secondary-100 hover:text-opacity-100 hover:from-secondary-400":
               appearance === "secondary",
           },
           {
@@ -52,7 +52,7 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
               appearance === "secondary-outline",
           },
           {
-            "border-transparent bg-brand-500 text-white text-opacity-90 hover:text-opacity-100 hover:bg-brand-400 hover:ring-brand-400":
+            "bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700 text-brand-100 hover:text-opacity-100 hover:from-brand-400":
               appearance === "brand",
           },
           {
@@ -60,7 +60,7 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
               appearance === "brand_outline",
           },
           {
-            "border-transparent bg-gray-50 text-gray-800 hover:bg-gray-200":
+            "bg-gradient-to-br from-gray-500 via-gray-600 to-gray-700  text-gray-50 hover:from-gray-400":
               appearance === "muted",
           },
           {

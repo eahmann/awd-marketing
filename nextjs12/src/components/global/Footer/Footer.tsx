@@ -9,6 +9,17 @@ import NextImage from "@/components/shared/NextImage"
 
 import LocaleSwitch from "../LocaleSwitch"
 
+const footerNavigation = {
+  main: [
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Accessibility", href: "#" },
+    { name: "Partners", href: "#" },
+  ],
+}
+
 const Footer = ({
   contactInfo,
   social,
@@ -22,76 +33,71 @@ const Footer = ({
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <NextImage width="220" height="80" media={logo} />
-            <p className="text-base text-gray-500">{smallText}</p>
-            <div className="flex space-x-6">
-              {social.facebook && (
-                <CustomLink
-                  link={{
-                    href: "http://www.facebook.com/" + social.facebook,
-                    newTab: true,
-                  }}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{social.facebook}</span>
-                  <FaFacebookSquare className="w-6 h-6" aria-hidden="true" />
-                </CustomLink>
-              )}
-              {social.instagram && (
-                <CustomLink
-                  link={{
-                    href: "http://www.instagram.com/" + social.instagram,
-                    newTab: true,
-                  }}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{social.instagram}</span>
-                  <FaInstagramSquare className="w-6 h-6" aria-hidden="true" />
-                </CustomLink>
-              )}
-              {social.twitter && (
-                <CustomLink
-                  link={{
-                    href: "http://www.twitter.com/" + social.twitter,
-                    newTab: true,
-                  }}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{social.twitter}</span>
-                  <FaTwitterSquare className="w-6 h-6" aria-hidden="true" />
-                </CustomLink>
-              )}
-            </div>
-          </div>
-          <div className="flex flex-col flex-wrap justify-center mt-12 sm:flex-row gap-12 xl:mt-0 md:col-span-2">
-            {columns.map((column) => (
-              <div key={column.id} className="md:grid md:grid-cols-1 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                    {column.title}
-                  </h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {column.links.map((link) => (
-                      <li key={link.label}>
-                        <CustomLink link={link} className="">
-                          <span className="text-base text-gray-500 hover:text-gray-900">
-                            {link.label}
-                          </span>
-                        </CustomLink>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+      <div className="px-4 mx-auto mt-6 sm:px-6 lg:py-16 lg:px-8">
+        <div className="grid">
+          <div className=" mx-auto ">
+            <NextImage width="220" height="100" media={logo} />
           </div>
         </div>
         <LocaleSwitch pageContext={pageContext} />
+        <nav
+          className="flex flex-wrap justify-center -mx-5 -my-2"
+          aria-label="Footer"
+        >
+          {footerNavigation.main.map((item) => (
+            <div key={item.name} className="px-5 py-2">
+              <a
+                href={item.href}
+                className="text-base text-gray-200 hover:text-gray-100"
+              >
+                {item.name}
+              </a>
+            </div>
+          ))}
+        </nav>
+        <div className="flex justify-center mt-8 space-x-6">
+          <div className="flex space-x-6">
+            {social.facebook && (
+              <CustomLink
+                link={{
+                  href: "http://www.facebook.com/" + social.facebook,
+                  newTab: true,
+                }}
+                className="text-gray-100 hover:text-gray-200"
+              >
+                <span className="sr-only">{social.facebook}</span>
+                <FaFacebookSquare className="w-6 h-6" aria-hidden="true" />
+              </CustomLink>
+            )}
+            {social.instagram && (
+              <CustomLink
+                link={{
+                  href: "http://www.instagram.com/" + social.instagram,
+                  newTab: true,
+                }}
+                className="text-gray-100 hover:text-gray-200"
+              >
+                <span className="sr-only">{social.instagram}</span>
+                <FaInstagramSquare className="w-6 h-6" aria-hidden="true" />
+              </CustomLink>
+            )}
+            {social.twitter && (
+              <CustomLink
+                link={{
+                  href: "http://www.twitter.com/" + social.twitter,
+                  newTab: true,
+                }}
+                className="text-gray-100 hover:text-gray-200"
+              >
+                <span className="sr-only">{social.twitter}</span>
+                <FaTwitterSquare className="w-6 h-6" aria-hidden="true" />
+              </CustomLink>
+            )}
+          </div>
+        </div>
+
         <div className="pt-8 mt-12">
-          <p className="text-base text-gray-400 xl:text-center">
+          <p className="text-base text-gray-100 xl:text-center">
             &copy; 2021 Atomic Web Development All rights reserved.
           </p>
         </div>

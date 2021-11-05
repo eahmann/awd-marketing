@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "name": "Feature",
+    "icon": "th-list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "FaBeer",
+        "FaNodeJs",
+        "AiOutlineRocket",
+        "FaRegFileCode"
+      ]
+    }
+  }
+}

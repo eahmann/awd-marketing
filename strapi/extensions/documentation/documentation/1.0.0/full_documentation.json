@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/03/2021 11:24:58 PM"
+    "x-generation-date": "11/05/2021 9:08:23 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4905,15 +4905,14 @@
                       "enum": [
                         "brand",
                         "brand_shadow",
-                        "brand_outline",
                         "primary",
                         "primary_shadow",
-                        "primary_outline",
                         "secondary",
+                        "secondary_shadow",
                         "muted",
+                        "muted_shadow",
                         "dark",
-                        "dark_shadow",
-                        "dark_outline"
+                        "dark_shadow"
                       ]
                     },
                     "target": {
@@ -5498,15 +5497,14 @@
                       "enum": [
                         "brand",
                         "brand_shadow",
-                        "brand_outline",
                         "primary",
                         "primary_shadow",
-                        "primary_outline",
                         "secondary",
+                        "secondary_shadow",
                         "muted",
+                        "muted_shadow",
                         "dark",
-                        "dark_shadow",
-                        "dark_outline"
+                        "dark_shadow"
                       ]
                     },
                     "target": {
@@ -6042,15 +6040,14 @@
                             "enum": [
                               "brand",
                               "brand_shadow",
-                              "brand_outline",
                               "primary",
                               "primary_shadow",
-                              "primary_outline",
                               "secondary",
+                              "secondary_shadow",
                               "muted",
+                              "muted_shadow",
                               "dark",
-                              "dark_shadow",
-                              "dark_outline"
+                              "dark_shadow"
                             ]
                           },
                           "target": {
@@ -6658,15 +6655,14 @@
                             "enum": [
                               "brand",
                               "brand_shadow",
-                              "brand_outline",
                               "primary",
                               "primary_shadow",
-                              "primary_outline",
                               "secondary",
+                              "secondary_shadow",
                               "muted",
+                              "muted_shadow",
                               "dark",
-                              "dark_shadow",
-                              "dark_outline"
+                              "dark_shadow"
                             ]
                           },
                           "target": {
@@ -6736,36 +6732,14 @@
                     "id": {
                       "type": "string"
                     },
-                    "heading": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "alignment",
-                        "title"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "alignment": {
-                          "type": "string",
-                          "default": "center",
-                          "enum": [
-                            "left",
-                            "right",
-                            "center"
-                          ]
-                        },
-                        "title": {
-                          "type": "string"
-                        },
-                        "text": {
-                          "type": "string"
-                        },
-                        "label": {
-                          "type": "string"
-                        }
-                      }
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
                     },
                     "features": {
                       "type": "array",
@@ -6773,8 +6747,7 @@
                         "type": "object",
                         "required": [
                           "id",
-                          "title",
-                          "image"
+                          "title"
                         ],
                         "properties": {
                           "id": {
@@ -6786,144 +6759,21 @@
                           "text": {
                             "type": "string"
                           },
-                          "image": {
-                            "required": [
-                              "id",
-                              "name",
-                              "hash",
-                              "mime",
-                              "size",
-                              "url",
-                              "provider"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "name": {
-                                "type": "string"
-                              },
-                              "alternativeText": {
-                                "type": "string"
-                              },
-                              "caption": {
-                                "type": "string"
-                              },
-                              "width": {
-                                "type": "integer"
-                              },
-                              "height": {
-                                "type": "integer"
-                              },
-                              "formats": {
-                                "type": "object"
-                              },
-                              "hash": {
-                                "type": "string"
-                              },
-                              "ext": {
-                                "type": "string"
-                              },
-                              "mime": {
-                                "type": "string"
-                              },
-                              "size": {
-                                "type": "number"
-                              },
-                              "url": {
-                                "type": "string"
-                              },
-                              "previewUrl": {
-                                "type": "string"
-                              },
-                              "provider": {
-                                "type": "string"
-                              },
-                              "provider_metadata": {
-                                "type": "object"
-                              },
-                              "related": {
-                                "type": "string"
-                              },
-                              "created_by": {
-                                "type": "string"
-                              },
-                              "updated_by": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "link": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "href",
-                              "label"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "href": {
-                                "type": "string"
-                              },
-                              "label": {
-                                "type": "string"
-                              },
-                              "target": {
-                                "type": "string",
-                                "enum": [
-                                  "_blank"
-                                ]
-                              }
-                            }
+                          "icon": {
+                            "type": "string",
+                            "enum": [
+                              "FaBeer",
+                              "FaNodeJs",
+                              "AiOutlineRocket",
+                              "FaRegFileCode"
+                            ]
                           }
-                        }
-                      }
-                    },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "marginTop",
-                        "marginBottom"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "theme": {
-                          "type": "string",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted",
-                            "white"
-                          ]
-                        },
-                        "marginTop": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "marginBottom": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "template": {
-                          "type": "string",
-                          "enum": [
-                            "rows",
-                            "columns"
-                          ]
                         }
                       }
                     }
                   },
                   "required": [
-                    "id",
-                    "heading",
-                    "settings"
+                    "id"
                   ]
                 },
                 {
@@ -7090,15 +6940,14 @@
                             "enum": [
                               "brand",
                               "brand_shadow",
-                              "brand_outline",
                               "primary",
                               "primary_shadow",
-                              "primary_outline",
                               "secondary",
+                              "secondary_shadow",
                               "muted",
+                              "muted_shadow",
                               "dark",
-                              "dark_shadow",
-                              "dark_outline"
+                              "dark_shadow"
                             ]
                           },
                           "target": {
@@ -7579,15 +7428,14 @@
                             "enum": [
                               "brand",
                               "brand_shadow",
-                              "brand_outline",
                               "primary",
                               "primary_shadow",
-                              "primary_outline",
                               "secondary",
+                              "secondary_shadow",
                               "muted",
+                              "muted_shadow",
                               "dark",
-                              "dark_shadow",
-                              "dark_outline"
+                              "dark_shadow"
                             ]
                           },
                           "target": {
@@ -8195,15 +8043,14 @@
                             "enum": [
                               "brand",
                               "brand_shadow",
-                              "brand_outline",
                               "primary",
                               "primary_shadow",
-                              "primary_outline",
                               "secondary",
+                              "secondary_shadow",
                               "muted",
+                              "muted_shadow",
                               "dark",
-                              "dark_shadow",
-                              "dark_outline"
+                              "dark_shadow"
                             ]
                           },
                           "target": {
@@ -8273,36 +8120,14 @@
                     "id": {
                       "type": "string"
                     },
-                    "heading": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "alignment",
-                        "title"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "alignment": {
-                          "type": "string",
-                          "default": "center",
-                          "enum": [
-                            "left",
-                            "right",
-                            "center"
-                          ]
-                        },
-                        "title": {
-                          "type": "string"
-                        },
-                        "text": {
-                          "type": "string"
-                        },
-                        "label": {
-                          "type": "string"
-                        }
-                      }
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
                     },
                     "features": {
                       "type": "array",
@@ -8310,8 +8135,7 @@
                         "type": "object",
                         "required": [
                           "id",
-                          "title",
-                          "image"
+                          "title"
                         ],
                         "properties": {
                           "id": {
@@ -8323,144 +8147,21 @@
                           "text": {
                             "type": "string"
                           },
-                          "image": {
-                            "required": [
-                              "id",
-                              "name",
-                              "hash",
-                              "mime",
-                              "size",
-                              "url",
-                              "provider"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "name": {
-                                "type": "string"
-                              },
-                              "alternativeText": {
-                                "type": "string"
-                              },
-                              "caption": {
-                                "type": "string"
-                              },
-                              "width": {
-                                "type": "integer"
-                              },
-                              "height": {
-                                "type": "integer"
-                              },
-                              "formats": {
-                                "type": "object"
-                              },
-                              "hash": {
-                                "type": "string"
-                              },
-                              "ext": {
-                                "type": "string"
-                              },
-                              "mime": {
-                                "type": "string"
-                              },
-                              "size": {
-                                "type": "number"
-                              },
-                              "url": {
-                                "type": "string"
-                              },
-                              "previewUrl": {
-                                "type": "string"
-                              },
-                              "provider": {
-                                "type": "string"
-                              },
-                              "provider_metadata": {
-                                "type": "object"
-                              },
-                              "related": {
-                                "type": "string"
-                              },
-                              "created_by": {
-                                "type": "string"
-                              },
-                              "updated_by": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "link": {
-                            "type": "object",
-                            "required": [
-                              "id",
-                              "href",
-                              "label"
-                            ],
-                            "properties": {
-                              "id": {
-                                "type": "string"
-                              },
-                              "href": {
-                                "type": "string"
-                              },
-                              "label": {
-                                "type": "string"
-                              },
-                              "target": {
-                                "type": "string",
-                                "enum": [
-                                  "_blank"
-                                ]
-                              }
-                            }
+                          "icon": {
+                            "type": "string",
+                            "enum": [
+                              "FaBeer",
+                              "FaNodeJs",
+                              "AiOutlineRocket",
+                              "FaRegFileCode"
+                            ]
                           }
-                        }
-                      }
-                    },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "marginTop",
-                        "marginBottom"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "theme": {
-                          "type": "string",
-                          "enum": [
-                            "brand",
-                            "primary",
-                            "secondary",
-                            "muted",
-                            "white"
-                          ]
-                        },
-                        "marginTop": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "marginBottom": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "template": {
-                          "type": "string",
-                          "enum": [
-                            "rows",
-                            "columns"
-                          ]
                         }
                       }
                     }
                   },
                   "required": [
-                    "id",
-                    "heading",
-                    "settings"
+                    "id"
                   ]
                 },
                 {
@@ -8627,15 +8328,14 @@
                             "enum": [
                               "brand",
                               "brand_shadow",
-                              "brand_outline",
                               "primary",
                               "primary_shadow",
-                              "primary_outline",
                               "secondary",
+                              "secondary_shadow",
                               "muted",
+                              "muted_shadow",
                               "dark",
-                              "dark_shadow",
-                              "dark_outline"
+                              "dark_shadow"
                             ]
                           },
                           "target": {

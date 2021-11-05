@@ -7,22 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.heading",
-      "required": true
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
     },
     "features": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.feature"
-    },
-    "settings": {
-      "type": "component",
-      "repeatable": false,
-      "component": "settings.feature-group-settings",
-      "required": true
+      "component": "elements.feature"
     }
   }
 }
