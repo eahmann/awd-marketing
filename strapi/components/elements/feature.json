@@ -12,16 +12,12 @@
       "required": true
     },
     "text": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "icon": {
       "type": "enumeration",
-      "enum": [
-        "FaBeer",
-        "FaNodeJs",
-        "AiOutlineRocket",
-        "FaRegFileCode"
-      ]
+      "enum": ["FaBeer", "FaNodeJs", "AiOutlineRocket", "FaRegFileCode"]
     }
   }
 }
