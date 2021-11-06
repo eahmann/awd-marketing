@@ -1,8 +1,7 @@
 import classNames from "classnames"
 
-import { IButtonLink } from "@/types/IButtonLink"
-
 import CustomLink from "../CustomLink"
+import { IButtonLink } from "@/types/IButtonLink"
 
 interface Props {
   button: IButtonLink

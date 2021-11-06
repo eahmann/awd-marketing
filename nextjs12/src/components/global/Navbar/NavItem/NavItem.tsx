@@ -1,7 +1,6 @@
-import { INavItem } from "@/types/INavItem"
-
 import NavLink from "../NavLink"
 import NavPopover from "../NavPopover"
+import { INavItem } from "@/types/INavItem"
 
 type ItemProps = {
   itemData: INavItem

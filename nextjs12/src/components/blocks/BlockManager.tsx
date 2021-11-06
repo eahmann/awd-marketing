@@ -1,3 +1,5 @@
+import Pricing from "./Pricing"
+import ServiceCardGroup from "./ServiceCardGroup"
 import CallToAction from "@/components/blocks/CallToAction"
 import CarouselBlock from "@/components/blocks/Carousel/Carousel"
 import CenteredTitleAndText from "@/components/blocks/CenteredTitleAndText"
@@ -7,9 +9,6 @@ import FeatureGroup from "@/components/blocks/FeatureGroup"
 import GlobalContactInfo from "@/components/blocks/GlobalContactInfo"
 import Hero from "@/components/blocks/Hero"
 import ImageGallery from "@/components/blocks/ImageGallery"
-
-import Pricing from "./Pricing"
-import ServiceCardGroup from "./ServiceCardGroup"
 
 const blockComponents = {
   "blocks.hero-v2": Hero,

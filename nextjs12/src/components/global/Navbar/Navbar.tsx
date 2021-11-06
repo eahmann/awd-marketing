@@ -6,12 +6,11 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
+import NavItem from "./NavItem"
 import ButtonLink from "@/components/shared/ButtonLink"
 import NextImage from "@/components/shared/NextImage/NextImage"
 import { INavbar } from "@/types/INavbar"
 import { IPageContext } from "@/types/IPageContext"
-
-import NavItem from "./NavItem"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")

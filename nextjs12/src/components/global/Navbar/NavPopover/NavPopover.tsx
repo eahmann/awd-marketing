@@ -3,9 +3,8 @@ import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
-import { INavItem } from "@/types/INavItem"
-
 import NavLink from "../NavLink"
+import { INavItem } from "@/types/INavItem"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")

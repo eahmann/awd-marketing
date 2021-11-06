@@ -1,6 +1,5 @@
-import { ETheme } from "@/enums/ETheme"
-
 import { IButtonLink } from "./IButtonLink"
+import { ETheme } from "@/enums/ETheme"
 
 export interface ICtaBlock {
   title: string

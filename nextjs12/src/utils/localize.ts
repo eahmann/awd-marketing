@@ -1,6 +1,5 @@
-import IPage from "@/types/IPage"
-
 import { fetchAPI } from "./api/fetch"
+import IPage from "@/types/IPage"
 
 export async function getLocalizedPage(
   targetLocale,

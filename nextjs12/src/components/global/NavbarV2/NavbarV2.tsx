@@ -4,10 +4,9 @@ import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 
+import NavItem from "./NavItem"
 import ButtonLink from "@/components/shared/ButtonLink"
 import NextImage from "@/components/shared/NextImage/NextImage"
-
-import NavItem from "./NavItem"
 
 const navigation = [
   { name: "Product", href: "#" },

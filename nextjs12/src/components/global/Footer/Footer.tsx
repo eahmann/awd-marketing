@@ -4,10 +4,9 @@ import {
   FaInstagramSquare,
 } from "react-icons/fa"
 
+import LocaleSwitch from "../LocaleSwitch"
 import CustomLink from "@/components/shared/CustomLink"
 import NextImage from "@/components/shared/NextImage"
-
-import LocaleSwitch from "../LocaleSwitch"
 
 const footerNavigation = {
   main: [

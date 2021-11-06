@@ -1,6 +1,5 @@
-import LabelTitleText from "@/components/shared/LabelTitleText"
-
 import Plan from "./Plan"
+import LabelTitleText from "@/components/shared/LabelTitleText"
 
 const Pricing = ({ label, title, text, plans }) => {
   const labelTitleText = { label, title, text }
