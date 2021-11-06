@@ -23,9 +23,13 @@ const Seo: React.FC<Props> = ({
   if (!metaTitle && !metaDescription) return null
 
   const metaImageUrl =
-    "https://og-image-sgtu87b2h-eahmann.vercel.app/" +
+    "https://og.atomicweb.dev/api/general/?templateTitle=" +
     metaTitle +
-    "**.png?theme=light&md=1&fontSize=100px&images=https://res.cloudinary.com/dkznztisc/image/upload/v1635871244/AWD_branding_lighter_04_e6ccfde704.svg&widths=600&heights=600"
+    "&siteName=" +
+    titleSuffix +
+    "&description=" +
+    metaDescription +
+    "&theme=dark&logoWidth=500"
 
   return (
     <NextSeo
