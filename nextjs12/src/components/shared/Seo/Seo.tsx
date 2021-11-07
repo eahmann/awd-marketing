@@ -23,7 +23,7 @@ const Seo: React.FC<Props> = ({
   if (!metaTitle && !metaDescription) return null
 
   const metaImageUrl =
-    "https://og.atomicweb.dev/api/general/?templateTitle=" +
+    "https://og.atomicweb.dev/api/tailwind/?templateTitle=" +
     metaTitle +
     "&siteName=" +
     titleSuffix +
