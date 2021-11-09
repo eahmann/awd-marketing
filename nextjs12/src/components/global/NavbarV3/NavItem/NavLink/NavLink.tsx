@@ -15,7 +15,7 @@ const NavLink = ({ item }) => {
     <CustomLinkV2
       link={item}
       className={classNames(
-        "px-2 group leading-8 rounded-lg md:px-2 focus:ring-2 focus:outline-none focus:ring-offset-2 focus:ring-brand-500 focus:ring-offset-kashmir-blue-500",
+        "px-2 group leading-8 rounded-lg md:px-2 focus:ring-2 focus:outline-none focus:ring-offset-2 focus:ring-brand-500 focus:ring-offset-indigo-600",
         isActive ? "bg-gray-100 focus:bg-gray-100" : ""
       )}
     >
