@@ -55,7 +55,7 @@ const NavbarV3 = ({ navbar, pageContext }) => {
               {/* START: Desktop nav button group */}
               <Popover.Group
                 as="nav"
-                className="hidden md:flex space-x-4 lg:space-x-10"
+                className="flex-row hidden md:flex space-x-4 lg:space-x-10"
               >
                 {navbar.items.map((item) => (
                   <NavItem key={item.label} item={item} />

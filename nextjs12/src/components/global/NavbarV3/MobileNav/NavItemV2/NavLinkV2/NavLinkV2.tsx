@@ -1,10 +1,18 @@
+import { useEffect } from "react"
+
 import classNames from "classnames"
 import { useRouter } from "next/router"
 
 import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
 
-const NavLinkV2 = ({ item }) => {
-  const { query } = useRouter()
+const NavLinkV2 = ({ item, close }) => {
+  const { query, events } = useRouter()
+
+  useEffect(() => {
+    events.on("routeChangeComplete", () => {
+      close()
+    })
+  }, [events, close])
 
   // This will need adjusting if we have defined paths besides [[...slug]]
   const isActive = query["slug"]

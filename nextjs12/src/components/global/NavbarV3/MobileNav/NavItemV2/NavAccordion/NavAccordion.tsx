@@ -4,7 +4,7 @@ import classNames from "classnames"
 
 import NavLinkV2 from "../NavLinkV2"
 
-const NavAccordion = ({ item }) => {
+const NavAccordion = ({ item, close }) => {
   return (
     <>
       <Disclosure>
@@ -21,7 +21,7 @@ const NavAccordion = ({ item }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 py-2 text-gray-500 grid gap-y-4">
                 {item.children.map((item) => (
-                  <NavLinkV2 key={item.label} item={item} />
+                  <NavLinkV2 key={item.label} item={item} close={close} />
                 ))}
               </Disclosure.Panel>
             </div>
