@@ -40,7 +40,7 @@ const Footer = ({
         </div>
         <LocaleSwitch pageContext={pageContext} />
         <nav
-          className="flex flex-wrap justify-center -mx-5 -my-2"
+          className="flex flex-wrap justify-center -my-2"
           aria-label="Footer"
         >
           {footerNavigation.main.map((item) => (
