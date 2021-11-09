@@ -5,7 +5,6 @@ import { ChevronDownIcon } from "@heroicons/react/solid"
 import classNames from "classnames"
 import { useRouter } from "next/router"
 
-import NavLink from "@/components/global/NavbarV3/NavItem/NavLink"
 import NavLinkV2 from "../../MobileNav/NavItemV2/NavLinkV2"
 
 const NavPopover = ({ item }) => {
