@@ -42,7 +42,7 @@ const FeatureGroup = ({ label, title, text, features }) => {
   const heading = { label, title, text }
   return (
     <section>
-      <div className="mx-6 max-w-8xl">
+      <div className="mx-auto max-w-8xl px-6">
         {heading && <LabelTitleText {...heading} />}
         <div className="mt-10">
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
