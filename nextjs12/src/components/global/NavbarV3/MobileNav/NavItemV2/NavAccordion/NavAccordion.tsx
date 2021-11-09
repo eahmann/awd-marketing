@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react"
 import { ChevronUpIcon } from "@heroicons/react/solid"
 import classNames from "classnames"
+
 import NavLinkV2 from "../NavLinkV2"
 
 const NavAccordion = ({ item }) => {

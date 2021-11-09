@@ -46,8 +46,8 @@ import {
 } from "@heroicons/react/outline"
 import Link from "next/link"
 
-import NextImage from "@/components/shared/NextImage/NextImage"
 import NavItemV2 from "./NavItemV2"
+import NextImage from "@/components/shared/NextImage/NextImage"
 
 const MobileNav = ({ navbar }) => {
   return (
