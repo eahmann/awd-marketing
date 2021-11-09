@@ -19,7 +19,7 @@ const NavAccordion = ({ item }) => {
                   } w-5 h-5 text-gray-100`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pb-2 text-gray-500 grid gap-y-8">
+              <Disclosure.Panel className="px-4 py-2 text-gray-500 grid gap-y-4">
                 {item.children.map((item) => (
                   <NavLinkV2 key={item.label} item={item} />
                 ))}
