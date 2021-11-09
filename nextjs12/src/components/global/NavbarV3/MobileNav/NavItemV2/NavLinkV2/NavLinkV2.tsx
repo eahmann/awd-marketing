@@ -8,9 +8,13 @@ import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
 const NavLinkV2 = ({ item, close }) => {
   const { query, events } = useRouter()
 
+  const isActive1 = query["slug"] ? "/" + query["slug"] === item.href : false
+
   useEffect(() => {
     events.on("routeChangeComplete", () => {
-      close()
+      if (isActive1) {
+        close()
+      }
     })
   }, [events, close])
 
