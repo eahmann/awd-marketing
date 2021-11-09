@@ -3,29 +3,36 @@ import { useRouter } from "next/router"
 
 import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
 
-const NavLink = ({ item }) => {
+const NavLink = ({ href, label, isMobile }) => {
   const { query } = useRouter()
+  const link = { href }
 
   // This will need adjusting if we have defined paths besides [[...slug]]
-  const isActive = query["slug"]
-    ? "/" + query["slug"] === item.href
-    : item.href === "/"
+  const isActive = query["slug"] ? "/" + query["slug"] === href : href === "/"
 
   return (
     <CustomLinkV2
-      link={item}
+      link={link}
       className={classNames(
-        "px-2 group leading-8 rounded-lg md:px-2 focus:ring-2 focus:outline-none focus:ring-offset-2 focus:ring-brand-500 focus:ring-offset-kashmir-blue-500",
-        isActive ? "bg-gray-100 focus:bg-gray-100" : ""
+        "px-2 md:px-2 rounded-lg group", //Default
+        isActive ? "bg-gray-100 focus:bg-gray-100" : "",
+        isMobile
+          ? "inline-block w-full" // Mobile only
+          : "leading-8 focus:ring-brand-500 focus:ring-offset-indigo-500 " // Desktop only
       )}
     >
       <span
         className={classNames(
-          "font-medium leading-10 border-b-2 border-transparent md:text-base  group-hover:border-brand-500",
-          isActive ? "text-gray-700" : "text-gray-100 group-hover:text-gray-200"
+          "font-medium leading-10 group-hover:border-brand-500",
+          isActive
+            ? "text-gray-700"
+            : "text-gray-100 group-hover:text-gray-200",
+          isActive && isMobile ? "bg-gray-100 focus:bg-gray-100" : "",
+
+          isMobile ? "block" : "border-b-2 border-transparent md:text-base "
         )}
       >
-        {item.label}
+        {label}
       </span>
     </CustomLinkV2>
   )

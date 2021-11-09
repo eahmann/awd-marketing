@@ -2,21 +2,20 @@ import NavLink from "./NavLink"
 import NavPopover from "./NavPopover"
 
 // Display a nav item
-const Item = ({ item }) => {
+const Item = ({ item, isMobile }) => {
   // Get the element
   const NavComponent: typeof NavPopover | typeof NavLink =
     item.children.length > 0 ? NavPopover : NavLink
 
-  if (!NavComponent) {
-    return null
-  }
-
-  // Render the nav item
-  return <NavComponent item={item} />
+  return NavComponent ? <NavComponent {...item} isMobile={isMobile} /> : null
 }
 
-const NavItem = ({ item }) => {
-  return <Item item={item} />
+const NavItem = ({ item, isMobile }) => {
+  console.log(isMobile)
+
+  const props = { item, isMobile }
+
+  return <Item item={item} isMobile={isMobile} />
 }
 
 export default NavItem

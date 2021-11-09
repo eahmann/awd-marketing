@@ -1,5 +1,5 @@
-const NavPopover = ({ item }) => {
-  return <div>NavPopover {item.label}</div>
+const NavPopover = ({ label }) => {
+  return <div>NavPopover {label}</div>
 }
 
 export default NavPopover

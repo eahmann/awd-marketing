@@ -7,7 +7,6 @@ import NavItem from "../NavItem"
 import NextImage from "@/components/shared/NextImage/NextImage"
 
 const MobilePopover = ({ navbar }) => {
-
   return (
     <Transition
       as={Fragment}

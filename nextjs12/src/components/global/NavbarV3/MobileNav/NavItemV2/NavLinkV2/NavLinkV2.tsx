@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 
 import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
 
-const NavLink = ({ item }) => {
+const NavLinkV2 = ({ item }) => {
   const { query } = useRouter()
 
   // This will need adjusting if we have defined paths besides [[...slug]]
@@ -21,7 +21,7 @@ const NavLink = ({ item }) => {
     >
       <span
         className={classNames(
-          "font-medium leading-10 border-b-2 border-transparent md:text-base  group-hover:border-brand-500",
+          "font-medium leading-10 border-b-2 border-transparent md:text-base group-hover:border-brand-500",
           isActive ? "text-gray-700" : "text-gray-100 group-hover:text-gray-200"
         )}
       >
@@ -31,4 +31,4 @@ const NavLink = ({ item }) => {
   )
 }
 
-export default NavLink
+export default NavLinkV2

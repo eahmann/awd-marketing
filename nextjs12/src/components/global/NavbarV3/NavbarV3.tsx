@@ -1,62 +1,74 @@
+import { Fragment } from "react"
+
 import { Popover } from "@headlessui/react"
 import { MenuIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 
-import MobilePopover from "./MobilePopover"
+import MobileNav from "./MobileNav"
 import NavItem from "./NavItem"
-import ButtonLink from "@/components/shared/ButtonLink"
 import NextImage from "@/components/shared/NextImage/NextImage"
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-]
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ")
+}
 
 const NavbarV3 = ({ navbar, pageContext }) => {
   return (
-    <Popover as="header" className="relative">
-      <div className="pt-2 pb-4">
-        <nav
-          className="relative flex items-center justify-between px-4 mx-auto max-w-8xl sm:px-2"
-          aria-label="Global"
-        >
-          <div className="flex items-center flex-1">
-            <div className="flex items-center justify-between w-full md:w-auto">
-              <Link href="/">
-                <a>
-                  <span className="sr-only">Workflow</span>
-                  <div className="w-auto h-8 sm:h-20 md:hidden">
-                    <NextImage width="200" height="75" media={navbar.logo} />
-                  </div>
-                  <div className="hidden w-auto h-8 md:block sm:h-20">
+    <Popover as="header" className="relative ">
+      {({ open }) => (
+        <>
+          {/* Mobile nav overlay */}
+          <Popover.Overlay
+            className={`${
+              open
+                ? "opacity-50 fixed inset-0 z-10 transition-opacity duration-400 w-screen h-screen"
+                : "opacity-0"
+            } bg-black`}
+          />
+          <div className="px-4 mx-auto max-w-8xl sm:px-6">
+            <div className="flex items-center justify-between py-2 md:pt-6 md:justify-start md:space-x-10">
+              <div className="">
+                {/* START: Logo */}
+                <Link href="/">
+                  <a>
+                    <span className="sr-only">{navbar.logo.alt}</span>
                     <NextImage width="275" height="75" media={navbar.logo} />
-                  </div>
-                </a>
-              </Link>
-              <div className="flex items-center -mr-2 md:hidden">
-                <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
+                  </a>
+                </Link>
+                {/* END: Logo */}
+              </div>
+
+              {/* START: Mobile nav button */}
+              <div className="-my-2 -mr-2 md:hidden">
+                <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <span className="sr-only">Open menu</span>
                   <MenuIcon className="w-6 h-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
-            </div>
-            <div className="hidden space-x-8 md:flex md:ml-10">
-              {navbar.items.map((item) => (
-                <NavItem key={item.label} item={item} isMobile={false} />
-              ))}
-            </div>
-          </div>
-          <div className="hidden md:flex md:items-center md:space-x-6">
-            {navbar.buttons.map((button) => (
-              <ButtonLink key={button.id} button={button} />
-            ))}
-          </div>
-        </nav>
-      </div>
+              <Popover.Overlay
+                className={`${
+                  open ? "opacity-30 fixed inset-0" : "opacity-0"
+                } bg-black`}
+              />
+              {/* END: Mobile nav button */}
 
-      <MobilePopover navbar={navbar} />
+              {/* START: Desktop nav button group */}
+              <Popover.Group
+                as="nav"
+                className="hidden md:flex space-x-4 lg:space-x-10"
+              >
+                {navbar.items.map((item) => (
+                  <NavItem key={item.label} item={item} />
+                ))}
+              </Popover.Group>
+              {/* END: Desktop nav button group */}
+            </div>
+          </div>
+
+          {/* Mobile Nav */}
+          <MobileNav navbar={navbar} />
+        </>
+      )}
     </Popover>
   )
 }
