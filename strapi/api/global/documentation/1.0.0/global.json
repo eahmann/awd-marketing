@@ -401,8 +401,7 @@
                   "type": "object",
                   "required": [
                     "id",
-                    "label",
-                    "newTab"
+                    "label"
                   ],
                   "properties": {
                     "id": {
@@ -414,13 +413,11 @@
                     "label": {
                       "type": "string"
                     },
-                    "newTab": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "isExternal": {
-                      "type": "boolean",
-                      "default": false
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     },
                     "children": {
                       "type": "array",
@@ -993,8 +990,7 @@
                   "type": "object",
                   "required": [
                     "id",
-                    "label",
-                    "newTab"
+                    "label"
                   ],
                   "properties": {
                     "id": {
@@ -1006,13 +1002,11 @@
                     "label": {
                       "type": "string"
                     },
-                    "newTab": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "isExternal": {
-                      "type": "boolean",
-                      "default": false
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     },
                     "children": {
                       "type": "array",

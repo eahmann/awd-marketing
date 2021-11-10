@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/05/2021 11:48:51 AM"
+    "x-generation-date": "11/10/2021 1:49:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4827,8 +4827,7 @@
                   "type": "object",
                   "required": [
                     "id",
-                    "label",
-                    "newTab"
+                    "label"
                   ],
                   "properties": {
                     "id": {
@@ -4840,13 +4839,11 @@
                     "label": {
                       "type": "string"
                     },
-                    "newTab": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "isExternal": {
-                      "type": "boolean",
-                      "default": false
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     },
                     "children": {
                       "type": "array",
@@ -5419,8 +5416,7 @@
                   "type": "object",
                   "required": [
                     "id",
-                    "label",
-                    "newTab"
+                    "label"
                   ],
                   "properties": {
                     "id": {
@@ -5432,13 +5428,11 @@
                     "label": {
                       "type": "string"
                     },
-                    "newTab": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "isExternal": {
-                      "type": "boolean",
-                      "default": false
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "_blank"
+                      ]
                     },
                     "children": {
                       "type": "array",

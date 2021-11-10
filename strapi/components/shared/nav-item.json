@@ -15,15 +15,11 @@
       "type": "string",
       "required": true
     },
-    "newTab": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "isExternal": {
-      "type": "boolean",
-      "default": false,
-      "required": false
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_blank"
+      ]
     },
     "children": {
       "type": "component",

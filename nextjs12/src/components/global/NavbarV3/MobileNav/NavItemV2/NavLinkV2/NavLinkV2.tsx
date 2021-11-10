@@ -12,22 +12,13 @@ type Props = {
   isChildActive?: boolean
 }
 
-const NavLinkV2: React.FC<Props> = ({ item, close, isChildActive }) => {
+const NavLinkV2: React.FC<Props> = ({ item, close }) => {
   const { query, events } = useRouter()
 
   useEffect(() => {
     events.on("routeChangeComplete", () => {
-      let isPopoverLink = query["slug"]
-        ? "/" + query["slug"] === item.href
-        : false
-      if (isPopoverLink && isChildActive) {
-        console.log("isPopoverLink: " + isPopoverLink)
-        console.log("close: " + close)
-
-        close()
-      }
+      close()
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [events, close])
 
   // This will need adjusting if we have defined paths besides [[...slug]]
