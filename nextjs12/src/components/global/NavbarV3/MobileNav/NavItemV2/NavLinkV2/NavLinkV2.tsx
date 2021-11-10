@@ -4,8 +4,15 @@ import classNames from "classnames"
 import { useRouter } from "next/router"
 
 import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
+import { INavItem } from "@/types/INavItem"
 
-const NavLinkV2 = ({ item, close }) => {
+type Props = {
+  item: INavItem
+  close?: any
+  isChildActive?: boolean
+}
+
+const NavLinkV2: React.FC<Props> = ({ item, close, isChildActive }) => {
   const { query, events } = useRouter()
 
   useEffect(() => {
@@ -13,7 +20,10 @@ const NavLinkV2 = ({ item, close }) => {
       let isPopoverLink = query["slug"]
         ? "/" + query["slug"] === item.href
         : false
-      if (isPopoverLink && close) {
+      if (isPopoverLink && isChildActive) {
+        console.log("isPopoverLink: " + isPopoverLink)
+        console.log("close: " + close)
+
         close()
       }
     })
