@@ -8,14 +8,16 @@ import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
 const NavLinkV2 = ({ item, close }) => {
   const { query, events } = useRouter()
 
-  const isActive1 = query["slug"] ? "/" + query["slug"] === item.href : false
-
   useEffect(() => {
     events.on("routeChangeComplete", () => {
-      if (isActive1) {
+      let isPopoverLink = query["slug"]
+        ? "/" + query["slug"] === item.href
+        : false
+      if (isPopoverLink && close) {
         close()
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [events, close])
 
   // This will need adjusting if we have defined paths besides [[...slug]]
