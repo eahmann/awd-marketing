@@ -1,13 +1,23 @@
 import { Fragment } from "react"
+import { useEffect } from "react"
 
 import { Popover, Transition } from "@headlessui/react"
 import { XIcon } from "@heroicons/react/outline"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 import NavItem from "../NavItem"
 import NextImage from "@/components/shared/NextImage/NextImage"
 
-const MobileNav = ({ navbar }) => {
+const MobileNav = ({ navbar, close }) => {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", () => {
+      close()
+    })
+  }, [])
+
   return (
     <Transition
       as={Fragment}

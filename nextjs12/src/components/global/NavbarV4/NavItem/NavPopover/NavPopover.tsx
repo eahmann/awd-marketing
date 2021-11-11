@@ -61,7 +61,13 @@ const NavPopover = ({ item }) => {
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative px-5 py-6 bg-indigo-700 grid gap-6 sm:gap-8 sm:p-8">
                     {item.children.map((item) => (
-                      <NavLink key={item.id} item={item} />
+                      <div
+                        className={"flex"}
+                        key={item.id}
+                        onMouseUp={() => close()}
+                      >
+                        <NavLink key={item.id} item={item} />
+                      </div>
                     ))}
                   </div>
                 </div>

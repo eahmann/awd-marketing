@@ -1,15 +1,26 @@
+import { useEffect } from "react"
+
 import { Popover } from "@headlessui/react"
 import { MenuIcon } from "@heroicons/react/outline"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 import MobileNav from "./MobileNav"
 import NavItem from "./NavItem"
 import NextImage from "@/components/shared/NextImage"
 
 const NavbarV4 = ({ navbar, pageContext }) => {
+  const { query, events } = useRouter()
+
+  useEffect(() => {
+    events.on("routeChangeComplete", () => {
+      close()
+    })
+  }, [])
+
   return (
     <Popover as="header" className="relative ">
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           {/* Mobile nav overlay */}
           <Popover.Overlay
@@ -60,7 +71,7 @@ const NavbarV4 = ({ navbar, pageContext }) => {
           </div>
 
           {/* Mobile Nav */}
-          <MobileNav navbar={navbar} />
+          <MobileNav navbar={navbar} close={close} />
         </>
       )}
     </Popover>

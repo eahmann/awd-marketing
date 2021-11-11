@@ -2,8 +2,14 @@ import classNames from "classnames"
 import { useRouter } from "next/router"
 
 import CustomLinkV2 from "@/components/shared/CustomLink/CustomLink"
+import { INavItem } from "@/types/INavItem"
 
-const NavLink = ({ item }) => {
+type NavLinkProps = {
+  item: INavItem
+  onMouseUp?: MouseEvent
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ item, onMouseUp }) => {
   const { query } = useRouter()
 
   // This will need adjusting if we have defined paths besides [[...slug]]
