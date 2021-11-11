@@ -1,5 +1,4 @@
 import Footer from "./global/Footer"
-import NavbarV3 from "./global/NavbarV3/NavbarV3"
 import NavbarV4 from "./global/NavbarV4"
 import PreviewBanner from "./global/PreviewBanner"
 
