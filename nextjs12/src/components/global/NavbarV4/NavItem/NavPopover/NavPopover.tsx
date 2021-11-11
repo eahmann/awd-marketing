@@ -22,19 +22,15 @@ const NavPopover = ({ item }) => {
         <>
           <Popover.Button
             className={classNames(
-              isChildActive
-                ? "outline-none ring-2 ring-offset-2 ring-offset-indigo-600 ring-brand-500"
-                : "",
-              "group text-gray-100 px-2 rounded-md inline-flex items-center font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-brand-500"
+              isChildActive ? "outline-none ring-2 ring-brand-500" : "",
+              "group rounded inline-flex items-center text-base text-gray-200 font-medium hover:text-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 p-2 w-full"
             )}
           >
-            <span className=" border-t-2 border-b-2 border-transparent group-hover:border-b-brand-500 ">
-              {item.label}
-            </span>
+            <span>{item.label}</span>
             <ChevronDownIcon
               className={classNames(
                 open ? "transform rotate-180" : "",
-                "ml-2 h-5 w-5 group-hover:text-gray-100"
+                "ml-1 mr-2 md:mr-0 h-5 w-5"
               )}
               aria-hidden="true"
             />
@@ -48,7 +44,7 @@ const NavPopover = ({ item }) => {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-20 max-w-md px-2 mt-3 -ml-4 w-max transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+            <Popover.Panel className="absolute z-20 max-w-md px-2 mt-3  w-max transform sm:px-0 lg:ml-0 md:left-full md:-translate-x-full">
               {({ close }) => (
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative px-5 py-6 bg-indigo-700 grid gap-6 sm:gap-8 sm:p-8">
