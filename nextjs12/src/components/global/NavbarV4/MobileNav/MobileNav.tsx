@@ -16,7 +16,7 @@ const MobileNav = ({ navbar, close }) => {
     router.events.on("routeChangeComplete", () => {
       close()
     })
-  }, [])
+  })
 
   return (
     <Transition
