@@ -1,5 +1,6 @@
 import Footer from "./global/Footer"
 import NavbarV3 from "./global/NavbarV3/NavbarV3"
+import NavbarV4 from "./global/NavbarV4"
 import PreviewBanner from "./global/PreviewBanner"
 
 const Layout = ({ children, global, preview, pageContext }) => {
@@ -8,7 +9,7 @@ const Layout = ({ children, global, preview, pageContext }) => {
     <div className="flex flex-col justify-between min-h-screen bg-indigo-600">
       {/* Aligned to the top */}
       {preview && <PreviewBanner />}
-      <NavbarV3 navbar={navbar} pageContext={pageContext} />
+      <NavbarV4 navbar={navbar} pageContext={pageContext} />
       <main className="flex-1">{children}</main>
       {/* Aligned to the bottom */}
       <Footer
