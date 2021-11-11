@@ -14,16 +14,7 @@ const NavPopover = ({ item }) => {
     return child.href
   })
 
-  console.log(childrenSlugs)
-
   const isChildActive = childrenSlugs.includes("/" + query["slug"])
-
-  console.log(isChildActive)
-
-  // This will need adjusting if we have defined paths besides [[...slug]]
-  const isActive = query["slug"]
-    ? "/" + query["slug"] === item.href
-    : item.href === "/"
 
   return (
     <Popover className="relative">
@@ -34,10 +25,12 @@ const NavPopover = ({ item }) => {
               isChildActive
                 ? "outline-none ring-2 ring-offset-2 ring-offset-indigo-600 ring-brand-500"
                 : "",
-              "group text-gray-100 py-1 px-2 rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-brand-500"
+              "group text-gray-100 px-2 rounded-md inline-flex items-center font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-brand-500"
             )}
           >
-            <span>{item.label}</span>
+            <span className=" border-t-2 border-b-2 border-transparent group-hover:border-b-brand-500 ">
+              {item.label}
+            </span>
             <ChevronDownIcon
               className={classNames(
                 open ? "transform rotate-180" : "",
@@ -46,7 +39,6 @@ const NavPopover = ({ item }) => {
               aria-hidden="true"
             />
           </Popover.Button>
-
           <Transition
             as={Fragment}
             enter="transition ease-out duration-200"

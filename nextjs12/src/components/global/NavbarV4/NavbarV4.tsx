@@ -1,23 +1,12 @@
-import { useEffect } from "react"
-
 import { Popover } from "@headlessui/react"
 import { MenuIcon } from "@heroicons/react/outline"
 import Link from "next/link"
-import { useRouter } from "next/router"
 
 import MobileNav from "./MobileNav"
 import NavItem from "./NavItem"
 import NextImage from "@/components/shared/NextImage"
 
 const NavbarV4 = ({ navbar, pageContext }) => {
-  const { query, events } = useRouter()
-
-  useEffect(() => {
-    events.on("routeChangeComplete", () => {
-      close()
-    })
-  }, [])
-
   return (
     <Popover as="header" className="relative ">
       {({ open, close }) => (
@@ -58,14 +47,17 @@ const NavbarV4 = ({ navbar, pageContext }) => {
               {/* END: Mobile nav button */}
 
               {/* START: Desktop nav button group */}
-              <Popover.Group
-                as="nav"
-                className="flex-row hidden md:flex space-x-4 lg:space-x-10"
-              >
-                {navbar.items.map((item) => (
-                  <NavItem key={item.label} item={item} />
-                ))}
-              </Popover.Group>
+
+              <div className="hidden md:block">
+                  <Popover.Group
+                    as="nav"
+                    className="flex items-baseline flex-row space-x-4 lg:space-x-6"
+                  >
+                    {navbar.items.map((item) => (
+                      <NavItem key={item.label} item={item} />
+                    ))}
+                  </Popover.Group>
+              </div>
               {/* END: Desktop nav button group */}
             </div>
           </div>
