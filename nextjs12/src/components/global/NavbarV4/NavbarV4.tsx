@@ -49,14 +49,14 @@ const NavbarV4 = ({ navbar, pageContext }) => {
               {/* START: Desktop nav button group */}
 
               <div className="hidden md:block">
-                  <Popover.Group
-                    as="nav"
-                    className="flex items-baseline flex-row space-x-4 lg:space-x-6"
-                  >
-                    {navbar.items.map((item) => (
-                      <NavItem key={item.label} item={item} />
-                    ))}
-                  </Popover.Group>
+                <Popover.Group
+                  as="nav"
+                  className="flex items-baseline flex-row space-x-4 lg:space-x-6"
+                >
+                  {navbar.items.map((item) => (
+                    <NavItem key={item.label} item={item} />
+                  ))}
+                </Popover.Group>
               </div>
               {/* END: Desktop nav button group */}
             </div>
