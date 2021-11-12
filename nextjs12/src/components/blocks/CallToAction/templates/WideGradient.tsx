@@ -36,7 +36,7 @@ const WideGradient: React.FC<ICtaBlock> = ({
 }): JSX.Element => {
   return (
     <section>
-      <div className="mx-auto max-w-7xl mb-20">
+      <div className="mx-auto mb-20 max-w-7xl">
         <div
           className={classNames(
             getBackgroundColor(theme),

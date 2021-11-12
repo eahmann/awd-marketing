@@ -1,5 +1,6 @@
-import ButtonLink from "@/components/shared/ButtonLink"
 import { CheckIcon } from "@heroicons/react/outline"
+
+import ButtonLink from "@/components/shared/ButtonLink"
 
 const pricing = {
   tiers: [
@@ -38,7 +39,7 @@ const Plan = ({
       {pricing.tiers.map((tier) => (
         <div
           key={tier.title}
-          className="relative flex flex-col h-full p-8 bg-white/90 border border-gray-200 rounded-2xl shadow-sm"
+          className="relative flex flex-col h-full p-8 border border-gray-200 bg-white/90 rounded-2xl shadow-sm"
         >
           <div className="flex-1">
             <h3 className="text-xl font-semibold text-gray-900">{name}</h3>

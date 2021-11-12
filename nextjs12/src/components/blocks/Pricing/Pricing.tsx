@@ -6,7 +6,7 @@ const Pricing = ({ label, title, text, plans }) => {
 
   return (
     <section>
-      <div className="px-4 pt-8 mx-auto max-w-7xl sm:px-6 lg:px-8 mb-20">
+      <div className="px-4 pt-8 mx-auto mb-20 max-w-7xl sm:px-6 lg:px-8">
         <LabelTitleText {...labelTitleText} />
 
         <div className="mt-24 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
