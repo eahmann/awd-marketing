@@ -1737,6 +1737,48 @@
                           },
                           "basePrice": {
                             "type": "string"
+                          },
+                          "button": {
+                            "type": "object",
+                            "required": [
+                              "id",
+                              "href",
+                              "label",
+                              "theme"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "href": {
+                                "type": "string"
+                              },
+                              "label": {
+                                "type": "string"
+                              },
+                              "theme": {
+                                "type": "string",
+                                "default": "brand_shadow",
+                                "enum": [
+                                  "brand",
+                                  "brand_shadow",
+                                  "primary",
+                                  "primary_shadow",
+                                  "secondary",
+                                  "secondary_shadow",
+                                  "muted",
+                                  "muted_shadow",
+                                  "dark",
+                                  "dark_shadow"
+                                ]
+                              },
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
+                              }
+                            }
                           }
                         }
                       }
@@ -3126,6 +3168,48 @@
                           },
                           "basePrice": {
                             "type": "string"
+                          },
+                          "button": {
+                            "type": "object",
+                            "required": [
+                              "id",
+                              "href",
+                              "label",
+                              "theme"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "href": {
+                                "type": "string"
+                              },
+                              "label": {
+                                "type": "string"
+                              },
+                              "theme": {
+                                "type": "string",
+                                "default": "brand_shadow",
+                                "enum": [
+                                  "brand",
+                                  "brand_shadow",
+                                  "primary",
+                                  "primary_shadow",
+                                  "secondary",
+                                  "secondary_shadow",
+                                  "muted",
+                                  "muted_shadow",
+                                  "dark",
+                                  "dark_shadow"
+                                ]
+                              },
+                              "target": {
+                                "type": "string",
+                                "enum": [
+                                  "_blank"
+                                ]
+                              }
+                            }
                           }
                         }
                       }

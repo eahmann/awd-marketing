@@ -31,6 +31,11 @@
     },
     "basePrice": {
       "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button"
     }
   }
 }
