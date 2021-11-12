@@ -27,7 +27,7 @@ const NavLink: React.FC<NavLinkProps> = ({ item, onMouseUp }) => {
           : "text-gray-100"
       )}
     >
-      <span className="font-medium text-base group-hover:text-brand-500">
+      <span className="text-base font-medium group-hover:text-brand-500">
         {item.label}
       </span>
     </CustomLinkV2>

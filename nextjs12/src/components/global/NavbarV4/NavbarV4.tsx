@@ -20,15 +20,17 @@ const NavbarV4 = ({ navbar, pageContext }) => {
             } bg-black`}
           />
           <div className="px-4 mx-auto max-w-8xl sm:px-6">
-            <div className="flex items-center justify-between py-2 md:pt-6 md:justify-start md:space-x-10">
-              <div className="">
+            <div className="flex items-center justify-center py-2 sm:flex-wrap md:justify-start md:pt-6">
+              <div className="mx-auto lg:mx-0">
                 {/* START: Logo */}
-                <Link href="/">
-                  <a>
-                    <span className="sr-only">{navbar.logo.alt}</span>
-                    <NextImage width="275" height="75" media={navbar.logo} />
-                  </a>
-                </Link>
+                <div className="mr-2">
+                  <Link href="/">
+                    <a>
+                      <span className="sr-only">{navbar.logo.alt}</span>
+                      <NextImage width="275" height="75" media={navbar.logo} />
+                    </a>
+                  </Link>
+                </div>
                 {/* END: Logo */}
               </div>
 
@@ -48,10 +50,10 @@ const NavbarV4 = ({ navbar, pageContext }) => {
 
               {/* START: Desktop nav button group */}
 
-              <div className="hidden md:block">
+              <div className="hidden mx-auto md:block lg:mx-0 lg:ml-6">
                 <Popover.Group
                   as="nav"
-                  className="flex items-baseline flex-row space-x-4 lg:space-x-6"
+                  className="flex flex-row items-baseline space-x-4 lg:space-x-6"
                 >
                   {navbar.items.map((item) => (
                     <NavItem key={item.label} item={item} />
@@ -63,7 +65,7 @@ const NavbarV4 = ({ navbar, pageContext }) => {
           </div>
 
           {/* Mobile Nav */}
-          <MobileNav navbar={navbar} close={close} />
+          <MobileNav navbar={navbar} close={close} open={open} />
         </>
       )}
     </Popover>
