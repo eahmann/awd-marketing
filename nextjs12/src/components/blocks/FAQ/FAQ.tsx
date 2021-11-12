@@ -24,9 +24,7 @@ const FAQ = ({ title, questions, settings }) => {
                     <>
                       <dt className="text-lg">
                         <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-100">
-                          <span className="font-medium">
-                            {faq.question}
-                          </span>
+                          <span className="font-medium">{faq.question}</span>
                           <span className="flex items-center ml-6 h-7">
                             <ChevronDownIcon
                               className={classNames(
