@@ -41,9 +41,11 @@ const Hero = ({ image, title, subtitle, label, text, buttons }) => {
                 <div className="font-bold uppercase text-brand-500 sm:text-base lg:text-sm xl:text-base">
                   <span className="text-md">{label}</span>
                 </div>
-                <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-100 dark:text-gray-200 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span className="block">{title}</span>
-                  <span className="block text-indigo-100">{subtitle}</span>
+                  <span className="block text-indigo-100 dark:text-gray-400">
+                    {subtitle}
+                  </span>
                 </h1>
                 <p className="mt-3 text-base text-gray-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                   <ReactMarkdown>{text}</ReactMarkdown>

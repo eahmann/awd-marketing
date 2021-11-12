@@ -34,7 +34,7 @@ export async function fetchAPI(path, options = {}) {
     }
 
     const data = await response.json()
-    cache.put(requestUrl, data, 30000)
+    cache.put(requestUrl, data, 30)
 
     return data
   }

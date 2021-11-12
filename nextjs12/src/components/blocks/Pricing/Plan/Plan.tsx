@@ -1,3 +1,4 @@
+import ButtonLink from "@/components/shared/ButtonLink"
 import { CheckIcon } from "@heroicons/react/outline"
 
 const pricing = {
@@ -30,13 +31,14 @@ const Plan = ({
   price,
   pricePeriod,
   basePrice,
+  button,
 }) => {
   return (
     <div className="">
       {pricing.tiers.map((tier) => (
         <div
           key={tier.title}
-          className="relative flex flex-col h-full p-8 bg-white border border-gray-200 rounded-2xl shadow-sm"
+          className="relative flex flex-col h-full p-8 bg-white/90 border border-gray-200 rounded-2xl shadow-sm"
         >
           <div className="flex-1">
             <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
@@ -67,18 +69,7 @@ const Plan = ({
               ))}
             </ul>
           </div>
-
-          <a
-            href="#"
-            className={classNames(
-              tier.mostPopular
-                ? "bg-indigo-500 text-white hover:bg-indigo-600"
-                : "bg-indigo-50 text-indigo-700 hover:bg-indigo-100",
-              "mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-            )}
-          >
-            {tier.cta}
-          </a>
+          <ButtonLink className="mt-6" button={button} />
         </div>
       ))}
     </div>

@@ -23,8 +23,8 @@ const NavLink: React.FC<NavLinkProps> = ({ item, onMouseUp }) => {
       className={classNames(
         "group  rounded focus:outline-none focus:ring-2  focus:ring-brand-500 p-2",
         isActive
-          ? "text-gray-700 bg-gray-100 dark:bg-gray-200 ring-2 ring-brand-500 "
-          : "text-gray-100 dark:text-gray-300"
+          ? "text-gray-700 dark:text-brand-500 bg-gray-100 dark:bg-transparent ring-2 ring-brand-500 "
+          : "text-gray-100 "
       )}
     >
       <span className="text-base font-medium group-hover:text-brand-500">

@@ -9,11 +9,11 @@ const FAQ = ({ title, questions, settings }) => {
     <section
       className={classNames({ "mt-20": marginTop }, { "mb-20": marginBottom })}
     >
-      <div className="bg-white">
+      <div className="">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto divide-y-2">
             {title && (
-              <h2 className="text-xl font-extrabold text-left text-gray-900 sm:text-xl">
+              <h2 className="text-xl font-extrabold text-left text-gray-100 sm:text-xl">
                 {title}
               </h2>
             )}
@@ -23,8 +23,8 @@ const FAQ = ({ title, questions, settings }) => {
                   {({ open }) => (
                     <>
                       <dt className="text-lg">
-                        <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-400">
-                          <span className="font-medium text-gray-900">
+                        <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-100">
+                          <span className="font-medium">
                             {faq.question}
                           </span>
                           <span className="flex items-center ml-6 h-7">
@@ -47,7 +47,7 @@ const FAQ = ({ title, questions, settings }) => {
                         leaveTo="transform scale-95 opacity-0"
                       >
                         <Disclosure.Panel as="dd" className="pr-12 mt-2">
-                          <p className="text-base text-gray-500">
+                          <p className="text-base text-gray-200">
                             {faq.answer}
                           </p>
                         </Disclosure.Panel>

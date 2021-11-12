@@ -27,7 +27,7 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
     <CustomLink link={button} className={classNames(" text-center", className)}>
       <div
         className={classNames(
-          "px-6 py-3 text-base font-medium rounded-md w-full",
+          "px-6 py-3 text-base font-medium rounded-md overflow-hide w-full",
           {
             "shadow-lg": shadow,
           },
@@ -43,7 +43,7 @@ const ButtonLink: React.FC<Props> = ({ button, className }) => {
               appearance === "primary_outline",
           },
           {
-            "bg-gradient-to-br from-secondary-500 via-secondary-600 to-secondary-700 text-secondary-100 hover:text-opacity-100 hover:from-secondary-400":
+            "bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 text-secondary-100 hover:text-opacity-100 hover:from-indigo-400":
               appearance === "secondary",
           },
           {
