@@ -2,12 +2,14 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   mode: "jit",
+  darkMode: "class",
   purge: {
     content: [
       "./src/pages/**/*.{js,ts,jsx,tsx}",
       "./src/components/**/*.{js,ts,jsx,tsx}",
     ],
     safelist: [
+      "bg-indigo-800",
       "bg-brand-300",
       "bg-brand-400",
       "bg-brand-600",
@@ -58,11 +60,9 @@ module.exports = {
       "text-secondary-900",
     ],
   },
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        primary: defaultTheme.indigo,
         brand: {
           50: "#fff8f4",
           100: "#fff1e9",
@@ -124,6 +124,8 @@ module.exports = {
           900: "#223043",
         },
         indigo: {
+          DEFAULT: "#324D9D",
+          dark: "#090E1D",
           50: "#CFD7F0",
           100: "#C0CAEB",
           200: "#A1B1E1",

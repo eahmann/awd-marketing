@@ -41,6 +41,7 @@ const NavbarV4 = ({ navbar, pageContext }) => {
                   <MenuIcon className="w-6 h-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
+
               <Popover.Overlay
                 className={`${
                   open ? "opacity-30 fixed inset-0" : "opacity-0"

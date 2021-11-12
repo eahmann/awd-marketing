@@ -23,7 +23,7 @@ const NavPopover = ({ item }) => {
           <Popover.Button
             className={classNames(
               isChildActive ? "outline-none ring-2 ring-brand-500" : "",
-              "group rounded inline-flex items-center text-base text-gray-200 font-medium hover:text-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 p-2 w-full"
+              "group rounded inline-flex items-center text-base text-gray-200 dark:text-gray-300 font-medium hover:text-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 p-2 w-full"
             )}
           >
             <span>{item.label}</span>
@@ -47,7 +47,7 @@ const NavPopover = ({ item }) => {
             <Popover.Panel className="absolute z-20 max-w-md px-2 mt-3  w-max transform sm:px-0 lg:ml-0 md:left-full md:-translate-x-full">
               {({ close }) => (
                 <div className="overflow-hidden rounded-lg shadow-lg">
-                  <div className="relative px-5 py-6 bg-indigo-700 grid gap-6 sm:gap-8 sm:p-8">
+                  <div className="relative px-5 py-6 bg-indigo-700 dark:bg-indigo-800 grid gap-6 sm:gap-8 sm:p-8">
                     {item.children.map((item) => (
                       <div
                         className={"flex"}

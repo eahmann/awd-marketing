@@ -5,6 +5,7 @@ import {
 } from "react-icons/fa"
 
 import LocaleSwitch from "../LocaleSwitch"
+import ThemeToggle from "../ThemeToggle"
 import CustomLink from "@/components/shared/CustomLink"
 import NextImage from "@/components/shared/NextImage"
 
@@ -94,9 +95,12 @@ const Footer = ({
             )}
           </div>
         </div>
+        <div className="flex flex-row justify-center py-6">
+          <ThemeToggle />
+        </div>
 
-        <div className="pt-8 mt-12">
-          <p className="text-base text-gray-100 xl:text-center">
+        <div className="pt-4">
+          <p className="text-base text-center text-gray-100">
             &copy; 2021 Atomic Web Development All rights reserved.
           </p>
         </div>

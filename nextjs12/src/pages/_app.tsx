@@ -2,6 +2,7 @@ import React from "react"
 
 import { DefaultSeo } from "next-seo"
 import "../styles/tailwind.scss"
+import { ThemeProvider } from "next-themes"
 import App from "next/app"
 import ErrorPage from "next/error"
 import Head from "next/head"
@@ -61,7 +62,9 @@ function MyApp({ Component, pageProps }): JSX.Element {
           }),
         }}
       />
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }

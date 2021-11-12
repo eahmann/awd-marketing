@@ -10,10 +10,14 @@ const NavAccordion = ({ item }) => {
       <Disclosure>
         {({ open }) => (
           <>
-            <div className={classNames("bg-indigo-600 rounded-md")}>
+            <div
+              className={classNames(
+                "bg-indigo-700 dark:bg-indigo-800 rounded-md"
+              )}
+            >
               <Disclosure.Button
                 tabIndex={-1}
-                className="flex justify-between w-full px-2 py-2 font-medium text-left text-gray-100 text-md focus:outline-none focus-visible:ring"
+                className="flex justify-between w-full px-2 py-2 font-medium text-left text-gray-100  text-md focus:outline-none focus-visible:ring"
               >
                 <span>{item.label}</span>
                 <ChevronUpIcon
