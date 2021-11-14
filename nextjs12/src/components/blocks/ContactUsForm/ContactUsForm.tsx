@@ -71,7 +71,7 @@ const ContactUsForm = ({ contactInfo }) => {
             >
               {({ errors, touched, isSubmitting }) => (
                 <>
-                  <Form className="grid grid-cols-1 gap-y-7 sm:grid-cols-2 sm:gap-x-8 text-gray-100">
+                  <Form className="text-gray-100 grid grid-cols-1 gap-y-7 sm:grid-cols-2 sm:gap-x-8">
                     <div>
                       <label
                         htmlFor="firstName"
@@ -196,7 +196,7 @@ const ContactUsForm = ({ contactInfo }) => {
                           id="message"
                           name="message"
                           rows={4}
-                          className="block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 rounded-md text-gray-700"
+                          className="block w-full px-4 py-3 text-gray-700 border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 rounded-md"
                         />
                       </div>
                       <ErrorMessage

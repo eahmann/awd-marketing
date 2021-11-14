@@ -1,13 +1,5 @@
-import {
-  AnnotationIcon,
-  GlobeAltIcon,
-  LightningBoltIcon,
-  ScaleIcon,
-} from "@heroicons/react/outline"
-
 import Icon from "@/components/shared/Icon"
 import LabelTitleText from "@/components/shared/LabelTitleText"
-import { IHeading } from "@/types/IHeading"
 
 interface Props {
   label: string
@@ -17,7 +9,7 @@ const FeatureGroup = ({ label, title, text, features }) => {
   const heading = { label, title, text }
   return (
     <section>
-      <div className="px-6 mx-auto max-w-8xl mb-20">
+      <div className="px-6 mx-auto mb-20 max-w-8xl">
         {heading && <LabelTitleText {...heading} />}
         <div className="mt-10">
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
