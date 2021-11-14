@@ -71,11 +71,11 @@ const ContactUsForm = ({ contactInfo }) => {
             >
               {({ errors, touched, isSubmitting }) => (
                 <>
-                  <Form className="grid grid-cols-1 gap-y-7 sm:grid-cols-2 sm:gap-x-8">
+                  <Form className="grid grid-cols-1 gap-y-7 sm:grid-cols-2 sm:gap-x-8 text-gray-100">
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium "
                       >
                         First name
                       </label>
@@ -97,7 +97,7 @@ const ContactUsForm = ({ contactInfo }) => {
                     <div>
                       <label
                         htmlFor="last-name"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium"
                       >
                         Last name
                       </label>
@@ -119,7 +119,7 @@ const ContactUsForm = ({ contactInfo }) => {
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="company"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium"
                       >
                         Company
                       </label>
@@ -141,7 +141,7 @@ const ContactUsForm = ({ contactInfo }) => {
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium"
                       >
                         Email
                       </label>
@@ -163,7 +163,7 @@ const ContactUsForm = ({ contactInfo }) => {
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium"
                       >
                         Phone number
                       </label>
@@ -186,7 +186,7 @@ const ContactUsForm = ({ contactInfo }) => {
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium"
                       >
                         Message
                       </label>
@@ -196,7 +196,7 @@ const ContactUsForm = ({ contactInfo }) => {
                           id="message"
                           name="message"
                           rows={4}
-                          className="block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 rounded-md"
+                          className="block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 rounded-md text-gray-700"
                         />
                       </div>
                       <ErrorMessage
@@ -209,7 +209,7 @@ const ContactUsForm = ({ contactInfo }) => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white border border-transparent bg-brand-500 rounded-md shadow-sm hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 disabled:opacity-50 disabled:hover:bg-brand-500 disabled:cursor-default"
+                        className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium border border-transparent rounded-md shadow-sm  focus:outline-none focus:ring-2 disabled:opacity-50 disabled:hover:bg-brand-500 disabled:cursor-default bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700 text-brand-100 hover:text-opacity-100 hover:from-brand-400"
                       >
                         Submit
                       </button>
@@ -220,7 +220,7 @@ const ContactUsForm = ({ contactInfo }) => {
                   </p>
                   {submitted && (
                     <div className="text-center border-b-2 shadow-md sm:border-2 border-primary-400 sm:max-w-xl sm:rounded-md bg-primary-50 bg-opacity-40 sm:px-10 xl:p-12">
-                      <span className="font-medium text-gray-800 text-md">
+                      <span className="font-medium text-md">
                         Thank you for your message. We will get back to you as
                         soon as possible.
                       </span>

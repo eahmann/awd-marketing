@@ -21,7 +21,9 @@
       "type": "enumeration",
       "enum": [
         "wide_gradient",
-        "simple_justified"
+        "simple_justified",
+        "simple_wide",
+        "simple_centered"
       ]
     },
     "title": {

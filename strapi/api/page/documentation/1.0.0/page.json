@@ -551,7 +551,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -674,7 +675,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -694,7 +696,9 @@
                       "type": "string",
                       "enum": [
                         "wide_gradient",
-                        "simple_justified"
+                        "simple_justified",
+                        "simple_wide",
+                        "simple_centered"
                       ]
                     },
                     "title": {
@@ -769,7 +773,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -799,7 +804,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -960,7 +966,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -988,32 +995,10 @@
                           }
                         }
                       }
-                    },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "marginTop",
-                        "marginBottom"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "marginTop": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "marginBottom": {
-                          "type": "boolean",
-                          "default": true
-                        }
-                      }
                     }
                   },
                   "required": [
-                    "id",
-                    "settings"
+                    "id"
                   ]
                 },
                 {
@@ -1032,7 +1017,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1155,7 +1141,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1236,7 +1223,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1415,7 +1403,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1482,7 +1471,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1519,7 +1509,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1670,7 +1661,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -1777,6 +1769,130 @@
                                 "enum": [
                                   "_blank"
                                 ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blocks.carousel",
+                        "blocks.call-to-action",
+                        "blocks.contact-us-form",
+                        "blocks.service-card-group",
+                        "blocks.faq",
+                        "blocks.image-gallery",
+                        "blocks.title-and-text",
+                        "blocks.hero",
+                        "blocks.feature-group",
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2",
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "logos": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          },
+                          "image": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
                               }
                             }
                           }
@@ -1982,7 +2098,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2105,7 +2222,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2125,7 +2243,9 @@
                       "type": "string",
                       "enum": [
                         "wide_gradient",
-                        "simple_justified"
+                        "simple_justified",
+                        "simple_wide",
+                        "simple_centered"
                       ]
                     },
                     "title": {
@@ -2200,7 +2320,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2230,7 +2351,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2391,7 +2513,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2419,32 +2542,10 @@
                           }
                         }
                       }
-                    },
-                    "settings": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "marginTop",
-                        "marginBottom"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string"
-                        },
-                        "marginTop": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "marginBottom": {
-                          "type": "boolean",
-                          "default": true
-                        }
-                      }
                     }
                   },
                   "required": [
-                    "id",
-                    "settings"
+                    "id"
                   ]
                 },
                 {
@@ -2463,7 +2564,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2586,7 +2688,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2667,7 +2770,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2846,7 +2950,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2913,7 +3018,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -2950,7 +3056,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -3101,7 +3208,8 @@
                         "blocks.feature-group",
                         "blocks.global-contact-info",
                         "blocks.hero-v2",
-                        "blocks.pricing"
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
                       ]
                     },
                     "id": {
@@ -3208,6 +3316,130 @@
                                 "enum": [
                                   "_blank"
                                 ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "blocks.carousel",
+                        "blocks.call-to-action",
+                        "blocks.contact-us-form",
+                        "blocks.service-card-group",
+                        "blocks.faq",
+                        "blocks.image-gallery",
+                        "blocks.title-and-text",
+                        "blocks.hero",
+                        "blocks.feature-group",
+                        "blocks.global-contact-info",
+                        "blocks.hero-v2",
+                        "blocks.pricing",
+                        "blocks.logo-cloud"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "logos": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "href": {
+                            "type": "string"
+                          },
+                          "image": {
+                            "required": [
+                              "id",
+                              "name",
+                              "hash",
+                              "mime",
+                              "size",
+                              "url",
+                              "provider"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternativeText": {
+                                "type": "string"
+                              },
+                              "caption": {
+                                "type": "string"
+                              },
+                              "width": {
+                                "type": "integer"
+                              },
+                              "height": {
+                                "type": "integer"
+                              },
+                              "formats": {
+                                "type": "object"
+                              },
+                              "hash": {
+                                "type": "string"
+                              },
+                              "ext": {
+                                "type": "string"
+                              },
+                              "mime": {
+                                "type": "string"
+                              },
+                              "size": {
+                                "type": "number"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "previewUrl": {
+                                "type": "string"
+                              },
+                              "provider": {
+                                "type": "string"
+                              },
+                              "provider_metadata": {
+                                "type": "object"
+                              },
+                              "related": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
                               }
                             }
                           }

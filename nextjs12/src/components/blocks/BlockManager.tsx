@@ -1,6 +1,7 @@
+import CallToAction from "./CallToAction"
+import LogoCloud from "./LogoCloud"
 import Pricing from "./Pricing"
 import ServiceCardGroup from "./ServiceCardGroup"
-import CallToAction from "@/components/blocks/CallToAction"
 import CarouselBlock from "@/components/blocks/Carousel/Carousel"
 import CenteredTitleAndText from "@/components/blocks/CenteredTitleAndText"
 import ContactUsForm from "@/components/blocks/ContactUsForm"
@@ -22,6 +23,7 @@ const blockComponents = {
   "blocks.feature-group": FeatureGroup,
   "blocks.global-contact-info": GlobalContactInfo,
   "blocks.pricing": Pricing,
+  "blocks.logo-cloud": LogoCloud,
 }
 
 const getBlockComponent = ({ __component, ...rest }, index) => {

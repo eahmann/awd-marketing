@@ -2,29 +2,32 @@ import { Disclosure, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/outline"
 import classNames from "classnames"
 
-const FAQ = ({ title, questions, settings }) => {
-  const { marginTop, marginBottom } = settings
-
+const FAQ = ({ title, questions }) => {
   return (
-    <section
-      className={classNames({ "mt-20": marginTop }, { "mb-20": marginBottom })}
-    >
-      <div className="">
+    <section>
+      <div className="mb-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto divide-y-2">
+          <div className="max-w-3xl mx-auto bg-gray-100 divide-y-2 divide-brand-500 dark:bg-indigo-800 rounded-t-md">
             {title && (
-              <h2 className="text-xl font-extrabold text-left text-gray-100 sm:text-xl">
+              <h2 className="px-2 pt-2 text-xl font-extrabold text-left text-gray-800 dark:text-gray-100 dark: sm:text-xl">
                 {title}
               </h2>
             )}
-            <dl className="mt-2 space-y-6 divide-y divide-gray-200">
+            <dl className="mt-2 bg-indigo-600 space-y-6 divide-y divide-gray-200 dark:bg-indigo-900">
               {questions.map((faq) => (
                 <Disclosure as="div" key={faq.question} className="pt-6">
                   {({ open }) => (
-                    <>
+                    <div
+                      className={classNames(
+                        open
+                          ? "bg-indigo-700 dark:bg-indigo-800 rounded-md"
+                          : "rotate-0",
+                        "p-2 transition-all duration-150"
+                      )}
+                    >
                       <dt className="text-lg">
-                        <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-100">
-                          <span className="font-medium">{faq.question}</span>
+                        <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-200">
+                          <span className="font-bold">{faq.question}</span>
                           <span className="flex items-center ml-6 h-7">
                             <ChevronDownIcon
                               className={classNames(
@@ -44,13 +47,13 @@ const FAQ = ({ title, questions, settings }) => {
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-95 opacity-0"
                       >
-                        <Disclosure.Panel as="dd" className="pr-12 mt-2">
+                        <Disclosure.Panel as="dd" className="pr-12 mt-2 bg">
                           <p className="text-base text-gray-200">
                             {faq.answer}
                           </p>
                         </Disclosure.Panel>
                       </Transition>
-                    </>
+                    </div>
                   )}
                 </Disclosure>
               ))}

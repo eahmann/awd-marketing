@@ -10,46 +10,21 @@ import LabelTitleText from "@/components/shared/LabelTitleText"
 import { IHeading } from "@/types/IHeading"
 
 interface Props {
-  heading: IHeading
+  label: string
 }
-const features2 = [
-  {
-    name: "Competitive exchange rates",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: GlobeAltIcon,
-  },
-  {
-    name: "No hidden fees",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: ScaleIcon,
-  },
-  {
-    name: "Transfers are instant",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: LightningBoltIcon,
-  },
-  {
-    name: "Mobile notifications",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: AnnotationIcon,
-  },
-]
+
 const FeatureGroup = ({ label, title, text, features }) => {
   const heading = { label, title, text }
   return (
     <section>
-      <div className="px-6 mx-auto max-w-8xl">
+      <div className="px-6 mx-auto max-w-8xl mb-20">
         {heading && <LabelTitleText {...heading} />}
         <div className="mt-10">
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             {features.map((feature) => (
               <div key={feature.title} className="relative ">
                 <dt>
-                  <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-brand-500">
+                  <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-gradient-to-br from-brand-500 to-brand-800">
                     <Icon
                       icon={feature.icon}
                       className="w-6 h-6"

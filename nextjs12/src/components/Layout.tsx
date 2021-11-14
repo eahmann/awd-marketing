@@ -15,6 +15,7 @@ const Layout = ({ children, global, preview, pageContext }) => {
         contactInfo={contactInfo}
         pageContext={pageContext}
         social={social}
+        navbar={navbar}
         {...footer}
       />
     </div>

@@ -27,6 +27,7 @@ const Footer = ({
   smallText,
   columns,
   pageContext,
+  navbar,
 }) => {
   return (
     <footer className="" aria-labelledby="footer-heading">
@@ -44,13 +45,13 @@ const Footer = ({
           className="flex flex-wrap justify-center -my-2"
           aria-label="Footer"
         >
-          {footerNavigation.main.map((item) => (
-            <div key={item.name} className="px-5 py-2">
+          {navbar.items.map((item) => (
+            <div key={item.label} className="px-5 py-2">
               <a
                 href={item.href}
                 className="text-base text-gray-200 hover:text-gray-100"
               >
-                {item.name}
+                {item.label}
               </a>
             </div>
           ))}

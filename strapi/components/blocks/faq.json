@@ -14,12 +14,6 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.questions"
-    },
-    "settings": {
-      "type": "component",
-      "repeatable": false,
-      "component": "settings.basic-block-settings",
-      "required": true
     }
   }
 }

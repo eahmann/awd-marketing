@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_logo_clouds",
+  "info": {
+    "name": "Logo cloud",
+    "icon": "cloud-meatball"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.logo"
+    }
+  }
+}
