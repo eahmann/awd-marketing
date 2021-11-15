@@ -14,7 +14,8 @@
         "primary",
         "secondary",
         "muted",
-        "white"
+        "white",
+        "transparent"
       ]
     },
     "template": {

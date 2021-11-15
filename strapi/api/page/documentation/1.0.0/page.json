@@ -689,7 +689,8 @@
                         "primary",
                         "secondary",
                         "muted",
-                        "white"
+                        "white",
+                        "transparent"
                       ]
                     },
                     "template": {
@@ -2236,7 +2237,8 @@
                         "primary",
                         "secondary",
                         "muted",
-                        "white"
+                        "white",
+                        "transparent"
                       ]
                     },
                     "template": {
