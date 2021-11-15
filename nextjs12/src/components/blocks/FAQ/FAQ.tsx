@@ -7,7 +7,10 @@ const FAQ = ({ title, questions }) => {
     <section>
       <div className="mb-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto bg-gray-100 divide-y-2 divide-brand-500 dark:bg-indigo-800 rounded-t-md">
+          <div
+            className="max-w-3xl mx-auto bg-gray-100 divide-y-2 divide-brand-500 dark:bg-indigo-800 rounded-t-md"
+            id={title.split(" ").join("-").toLowerCase()}
+          >
             {title && (
               <h2 className="px-2 pt-2 text-xl font-extrabold text-left text-gray-800 dark:text-gray-100 dark: sm:text-xl">
                 {title}
@@ -20,7 +23,7 @@ const FAQ = ({ title, questions }) => {
                     <div
                       className={classNames(
                         open
-                          ? "bg-indigo-700 dark:bg-indigo-800 rounded-md"
+                          ? "bg-indigo-700 dark:bg-indigo-600 rounded-md"
                           : "rotate-0",
                         "p-2 transition-all duration-150"
                       )}

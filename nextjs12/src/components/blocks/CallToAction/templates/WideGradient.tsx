@@ -6,9 +6,11 @@ import { ICtaBlock } from "@/types/ICtaBlock"
 
 const getBackgroundColor = (theme: ETheme): string => {
   if (theme === ETheme.muted) {
-    return "bg-gray-200"
+    return "shadow-2xl bg-gray-200"
+  } else if (theme === ETheme.transparent) {
+    return "bg=transparent"
   } else {
-    return `bg-gradient-to-br from-${theme}-700 via-${theme}-500  to-${theme}-600`
+    return `shadow-2xl bg-gradient-to-br from-${theme}-700 via-${theme}-500  to-${theme}-600`
   }
 }
 
@@ -40,7 +42,7 @@ const WideGradient: React.FC<ICtaBlock> = ({
         <div
           className={classNames(
             getBackgroundColor(theme),
-            "shadow-2xl mx-6 rounded-xl px-4 py-16 text-center sm:px-6 lg:px-8"
+            "mx-6 rounded-xl px-4 py-16 text-center sm:px-6 lg:px-8"
           )}
         >
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">

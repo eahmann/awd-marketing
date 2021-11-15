@@ -3,4 +3,5 @@ export enum ETheme {
   secondary = "secondary",
   muted = "muted",
   white = "white",
+  transparent = "transparent",
 }
